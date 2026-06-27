@@ -837,6 +837,173 @@
     .dark-band { background: linear-gradient(180deg, var(--forest), var(--canopy)); }
     .leaf-band { background: linear-gradient(180deg, var(--canopy), var(--forest)); }
 
+    .payment-section {
+      background: linear-gradient(180deg, #132b15 0%, #0d1f0f 100%);
+      border-top: 1px solid rgba(200, 230, 201, 0.16);
+    }
+
+    .payment-inner {
+      display: grid;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .payment-text h2 em {
+      color: var(--gold-light);
+      font-style: italic;
+    }
+
+    .payment-qr-block {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .qr-card {
+      background: rgba(19, 43, 21, 0.9);
+      border: 1px solid rgba(212, 168, 83, 0.35);
+      border-radius: 12px;
+      padding: 28px 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      width: 100%;
+      max-width: 380px;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4);
+    }
+
+    .qr-label {
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(245, 240, 232, 0.6);
+      text-align: center;
+    }
+
+    .qr-image-wrap {
+      position: relative;
+      width: 240px;
+      height: 240px;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 3px solid rgba(212, 168, 83, 0.5);
+      background: #ffffff;
+    }
+
+    .qr-image {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    .qr-scan-ring {
+      position: absolute;
+      inset: 0;
+      border-radius: 10px;
+      border: 2px solid rgba(212, 168, 83, 0.6);
+      animation: scanPulse 2s ease-in-out infinite;
+      pointer-events: none;
+    }
+
+    @keyframes scanPulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.3; transform: scale(1.04); }
+    }
+
+    .qr-amount {
+      font-family: "Lora", Georgia, serif;
+      font-size: 2.2rem;
+      color: #e8c57a;
+      line-height: 1;
+      text-align: center;
+    }
+
+    .qr-amount span {
+      font-family: "DM Sans", system-ui, sans-serif;
+      font-size: 0.9rem;
+      color: rgba(245, 240, 232, 0.6);
+      font-weight: 400;
+      margin-left: 6px;
+    }
+
+    .qr-upi-id {
+      font-size: 0.88rem;
+      color: rgba(245, 240, 232, 0.75);
+      text-align: center;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .qr-upi-id strong {
+      color: #e8c57a;
+    }
+
+    .qr-copy {
+      margin-left: 8px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(200, 230, 201, 0.3);
+      background: transparent;
+      color: #e8c57a;
+      font-size: 0.78rem;
+      cursor: pointer;
+    }
+
+    .qr-apps {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: center;
+      font-size: 0.78rem;
+      color: rgba(245, 240, 232, 0.5);
+    }
+
+    .qr-app-badge {
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(200, 230, 201, 0.2);
+      color: rgba(245, 240, 232, 0.72);
+      font-size: 0.75rem;
+      font-weight: 700;
+    }
+
+    .qr-steps {
+      display: grid;
+      gap: 12px;
+      width: 100%;
+      max-width: 380px;
+    }
+
+    .qr-step {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      color: rgba(245, 240, 232, 0.8);
+      font-size: 0.88rem;
+    }
+
+    .qr-step-num {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: rgba(212, 168, 83, 0.15);
+      border: 1px solid rgba(212, 168, 83, 0.4);
+      color: #e8c57a;
+      font-weight: 800;
+      font-size: 0.82rem;
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+    }
+
     @media (max-width: 767px) {
       .mobile-partner { display: inline-flex; }
       .whatsapp-bubble { right: 16px; bottom: 84px; }
@@ -857,6 +1024,10 @@
       .contact-grid { grid-template-columns: 0.86fr 1.14fr; }
       .cta-inner { grid-template-columns: 1fr auto; }
       .footer-grid { grid-template-columns: 1.35fr repeat(3, 1fr); }
+      .payment-inner {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+      }
     }
 
     @media (min-width: 1024px) {
@@ -903,6 +1074,7 @@
     data-slot="story-1"                  → Story card 1 (420×200)
     data-slot="story-2"                  → Story card 2 (420×200)
     data-slot="story-3"                  → Story card 3 (420×200)
+    data-slot="gpay-qr"                  → GPay / UPI QR code (400×400 ideal)
   ==========================================================
   -->
 
@@ -1136,6 +1308,93 @@
       </div>
     </section>
 
+    <section class="section payment-section">
+      <div class="container">
+        <div class="payment-inner">
+          <div class="payment-text reveal" data-aos="fade-right">
+            <p class="eyebrow">Plant a tree today</p>
+            <h2>One tree. <em>₹299.</em><br>Real impact.</h2>
+            <p class="lead" style="margin-top:18px;">
+              Can't commit to a full CSR programme yet? Start with one tree.
+              Scan the QR code, pay ₹299 via GPay, and we plant a certified
+              native fruit tree in your name — GPS-tagged, photographed, and
+              documented within 48 hours.
+            </p>
+            <ul style="margin-top:24px;display:grid;gap:12px;list-style:none;padding:0;">
+              <li style="display:flex;gap:10px;align-items:flex-start;color:rgba(245,240,232,0.82);">
+                <svg width="20" height="20" viewBox="0 0 20 20" style="flex-shrink:0;margin-top:2px;color:#e8c57a"><path d="m4 10 4 4 8-9" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
+                GPS-tagged photo sent to your WhatsApp within 48 hours
+              </li>
+              <li style="display:flex;gap:10px;align-items:flex-start;color:rgba(245,240,232,0.82);">
+                <svg width="20" height="20" viewBox="0 0 20 20" style="flex-shrink:0;margin-top:2px;color:#e8c57a"><path d="m4 10 4 4 8-9" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
+                Digital certificate with your name and tree species
+              </li>
+              <li style="display:flex;gap:10px;align-items:flex-start;color:rgba(245,240,232,0.82);">
+                <svg width="20" height="20" viewBox="0 0 20 20" style="flex-shrink:0;margin-top:2px;color:#e8c57a"><path d="m4 10 4 4 8-9" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
+                80G tax exemption receipt on request
+              </li>
+              <li style="display:flex;gap:10px;align-items:flex-start;color:rgba(245,240,232,0.82);">
+                <svg width="20" height="20" viewBox="0 0 20 20" style="flex-shrink:0;margin-top:2px;color:#e8c57a"><path d="m4 10 4 4 8-9" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
+                Plant in someone's name — perfect as a gift
+              </li>
+            </ul>
+            <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:28px;">
+              <a class="btn gold" href="https://wa.me/918420770834?text=Hi%2C%20I%20want%20to%20plant%20a%20tree%20for%20%E2%82%B9299" target="_blank" rel="noopener">
+                Confirm on WhatsApp →
+              </a>
+              <a class="btn ghost" href="tel:+918420770834">Call +91 84207 70834</a>
+            </div>
+            <p style="margin-top:16px;font-size:0.82rem;color:rgba(245,240,232,0.5);">
+              After payment, WhatsApp your screenshot to +91 84207 70834 with your name and preferred tree species.
+            </p>
+          </div>
+
+          <div class="payment-qr-block reveal" data-aos="fade-left" data-aos-delay="150">
+            <div class="qr-card">
+              <div class="qr-label">Scan &amp; Pay via GPay / PhonePe / UPI</div>
+
+              <!-- QR CODE PLACEHOLDER -->
+              <!-- REPLACE the img below with your actual GPay QR code image -->
+              <!-- Ideal size: 400x400px, format: PNG, white background -->
+              <!-- data-slot="gpay-qr" — search this to find and replace -->
+              <div class="qr-image-wrap">
+                <img
+                  src="https://placehold.co/340x340/ffffff/132b15?text=YOUR+GPAY+QR+CODE+HERE"
+                  alt="GPay QR code for Bengal Tree Foundation tree donation"
+                  class="photo-slot qr-image"
+                  data-slot="gpay-qr"
+                  loading="lazy"
+                />
+                <div class="qr-scan-ring"></div>
+              </div>
+
+              <div class="qr-amount">₹299 <span>per tree</span></div>
+              <div class="qr-upi-id">
+                UPI ID:
+                <!-- REPLACE with your actual UPI ID -->
+                <strong id="upiId">btf@upi</strong>
+                <button class="qr-copy" type="button" id="copyUpiButton">Copy</button>
+              </div>
+              <div class="qr-apps">
+                <span>Works with</span>
+                <span class="qr-app-badge">GPay</span>
+                <span class="qr-app-badge">PhonePe</span>
+                <span class="qr-app-badge">Paytm</span>
+                <span class="qr-app-badge">BHIM</span>
+              </div>
+            </div>
+
+            <div class="qr-steps">
+              <div class="qr-step"><span class="qr-step-num">1</span><span>Scan QR or copy UPI ID</span></div>
+              <div class="qr-step"><span class="qr-step-num">2</span><span>Pay ₹299 per tree</span></div>
+              <div class="qr-step"><span class="qr-step-num">3</span><span>WhatsApp screenshot to +91 84207 70834</span></div>
+              <div class="qr-step"><span class="qr-step-num">4</span><span>Receive GPS photo + certificate in 48 hours</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section dark-band" id="gallery">
       <div class="container">
         <div class="section-head reveal">
@@ -1337,6 +1596,38 @@
     document.addEventListener("keydown", (event) => {
       if (event.key === "Escape") closeMenu();
     });
+
+    const copyUpiButton = document.getElementById("copyUpiButton");
+    const upiId = document.getElementById("upiId");
+
+    if (copyUpiButton && upiId) {
+      copyUpiButton.addEventListener("click", async () => {
+        const value = upiId.textContent.trim();
+        try {
+          if (navigator.clipboard) {
+            await navigator.clipboard.writeText(value);
+          } else {
+            const textArea = document.createElement("textarea");
+            textArea.value = value;
+            textArea.style.position = "fixed";
+            textArea.style.opacity = "0";
+            document.body.appendChild(textArea);
+            textArea.select();
+            document.execCommand("copy");
+            textArea.remove();
+          }
+          copyUpiButton.textContent = "Copied!";
+          setTimeout(() => {
+            copyUpiButton.textContent = "Copy";
+          }, 2000);
+        } catch (error) {
+          copyUpiButton.textContent = "Copy failed";
+          setTimeout(() => {
+            copyUpiButton.textContent = "Copy";
+          }, 2000);
+        }
+      });
+    }
 
     const revealObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
