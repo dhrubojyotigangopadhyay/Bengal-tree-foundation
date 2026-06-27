@@ -1,1200 +1,1397 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Our Work | Bengal Tree Foundation</title>
-<meta name="description" content="Bengal Tree Foundation plants certified 7–8 ft fruit trees across Kolkata and West Bengal — GPS geo-tagged, 85%+ survival guaranteed, fully Schedule VII CSR compliant.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-<style>
-/* ===== RESET & VARS ===== */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-:root {
-  --forest:   #0d1f0f;
-  --canopy:   #132b15;
-  --leaf:     #1e4620;
-  --moss:     #2d6a30;
-  --fern:     #3d8c40;
-  --sprout:   #5aaf5d;
-  --lime:     #8fd68f;
-  --mist:     #c8e6c9;
-  --gold:     #d4a853;
-  --gold-lt:  #e8c57a;
-  --cream:    #f5f0e8;
-  --white:    #ffffff;
-  --text-dk:  rgba(255,255,255,0.92);
-  --text-mid: rgba(255,255,255,0.60);
-  --text-dim: rgba(255,255,255,0.35);
-  --border:   rgba(255,255,255,0.09);
-  --font-disp: 'Lora', Georgia, serif;
-  --font-body: 'DM Sans', system-ui, sans-serif;
-  --ease: cubic-bezier(.4,0,.2,1);
-}
-html { font-size: 16px; scroll-behavior: smooth; }
-body {
-  font-family: var(--font-body);
-  background: var(--forest);
-  color: var(--text-dk);
-  -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
-  line-height: 1.65;
-}
-a { color: inherit; text-decoration: none; }
-img { display: block; max-width: 100%; }
-button { cursor: pointer; font-family: inherit; border: none; background: none; }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bengal Tree Foundation | CSR Tree Plantation Kolkata</title>
+  <meta name="description" content="Bengal Tree Foundation — certified fruit tree plantation for corporate CSR in Kolkata and West Bengal. Schedule VII compliant, GPS-verified, 85%+ survival guaranteed. Reg. IV-190100727/2024.">
+  <meta property="og:title" content="Bengal Tree Foundation | CSR Tree Plantation Kolkata">
+  <meta property="og:description" content="Plant certified fruit trees in Kolkata under Schedule VII CSR. Full documentation, GPS verification, 85%+ survival guarantee.">
+  <meta name="keywords" content="CSR tree plantation Kolkata, Schedule VII CSR, fruit tree plantation West Bengal, Bengal Tree Foundation, corporate tree planting India">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --forest: #0d1f0f;
+      --canopy: #132b15;
+      --leaf: #1e4620;
+      --moss: #2d6a30;
+      --fern: #3d8c40;
+      --sprout: #5aaf5d;
+      --lime: #8fd68f;
+      --mist: #c8e6c9;
+      --gold: #d4a853;
+      --gold-light: #e8c57a;
+      --cream: #f5f0e8;
+      --white: #ffffff;
+      --ink: #101810;
+      --muted: rgba(245, 240, 232, 0.74);
+      --line: rgba(200, 230, 201, 0.16);
+      --shadow: 0 22px 60px rgba(0, 0, 0, 0.28);
+      --radius: 8px;
+      --max: 1180px;
+    }
 
-/* ===== UTILITY ===== */
-.container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
-.sr-only { position: absolute; width:1px; height:1px; overflow:hidden; clip:rect(0,0,0,0); }
+    * { box-sizing: border-box; }
 
-/* ===== NAV ===== */
-nav {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-  padding: 0 2rem;
-  height: 68px;
-  display: flex; align-items: center; justify-content: space-between;
-  background: rgba(13,31,15,0.92);
-  backdrop-filter: blur(18px);
-  border-bottom: 1px solid var(--border);
-  transition: background .3s var(--ease);
-}
-nav.scrolled { background: rgba(13,31,15,0.98); }
-.nav-logo {
-  display: flex; align-items: center; gap: .65rem;
-  font-family: var(--font-disp); font-weight: 700;
-  font-size: 1.05rem; letter-spacing: -.01em;
-  color: var(--white);
-}
-.nav-leaf {
-  width: 34px; height: 34px;
-  background: linear-gradient(135deg, var(--fern), var(--moss));
-  border-radius: 50% 50% 50% 10% / 50% 50% 10% 50%;
-  display: flex; align-items: center; justify-content: center;
-  box-shadow: 0 0 16px rgba(93,175,93,.35);
-}
-.nav-links {
-  display: flex; gap: 2.2rem; list-style: none;
-}
-.nav-links a {
-  font-size: .875rem; font-weight: 500;
-  color: var(--text-mid);
-  transition: color .2s;
-  position: relative;
-  padding-bottom: 3px;
-}
-.nav-links a::after {
-  content: ''; position: absolute; bottom: 0; left: 0;
-  width: 0; height: 1.5px;
-  background: var(--sprout);
-  transition: width .25s var(--ease);
-}
-.nav-links a:hover { color: var(--white); }
-.nav-links a:hover::after { width: 100%; }
-.nav-cta {
-  display: flex; align-items: center; gap: 1rem;
-}
-.btn-nav {
-  padding: .55rem 1.4rem;
-  border-radius: 4px;
-  font-size: .875rem; font-weight: 600;
-  letter-spacing: .01em;
-  background: var(--fern);
-  color: var(--white);
-  transition: background .2s;
-}
-.btn-nav:hover { background: var(--moss); }
-.hamburger { display: none; flex-direction: column; gap: 5px; padding: 4px; }
-.hamburger span { display: block; width: 22px; height: 2px; background: var(--white); border-radius: 2px; transition: .3s; }
-.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-.hamburger.open span:nth-child(2) { opacity: 0; }
-.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-.mob-menu {
-  display: none;
-  position: fixed; inset: 0; z-index: 99;
-  background: rgba(13,31,15,.98);
-  padding: 5rem 2rem 2rem;
-  flex-direction: column; gap: 1.5rem;
-  transform: translateX(100%);
-  transition: transform .4s var(--ease);
-}
-.mob-menu.open { transform: translateX(0); display: flex; }
-.mob-menu a { font-family: var(--font-disp); font-size: 1.8rem; font-weight: 600; color: var(--text-mid); border-bottom: 1px solid var(--border); padding-bottom: 1rem; transition: color .2s; }
-.mob-menu a:hover { color: var(--lime); }
+    html {
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
 
-/* ===== HERO ===== */
-#hero {
-  position: relative;
-  min-height: 100vh;
-  display: flex; align-items: flex-end;
-  padding-top: 68px;
-  overflow: hidden;
-}
-.hero-bg {
-  position: absolute; inset: 0;
-  background:
-    linear-gradient(to bottom, rgba(13,31,15,.1) 0%, rgba(13,31,15,.65) 70%, rgba(13,31,15,1) 100%),
-    radial-gradient(ellipse at 20% 50%, rgba(45,106,48,.35) 0%, transparent 60%),
-    radial-gradient(ellipse at 80% 20%, rgba(30,70,32,.3) 0%, transparent 55%);
-}
-.hero-trees {
-  position: absolute; inset: 0;
-  background-image:
-    radial-gradient(ellipse 2px 60px at 8% 100%, rgba(93,175,93,.12) 0%, transparent 100%),
-    radial-gradient(ellipse 3px 80px at 15% 100%, rgba(93,175,93,.08) 0%, transparent 100%),
-    radial-gradient(ellipse 2px 50px at 25% 100%, rgba(93,175,93,.10) 0%, transparent 100%),
-    radial-gradient(ellipse 4px 90px at 35% 100%, rgba(93,175,93,.07) 0%, transparent 100%),
-    radial-gradient(ellipse 2px 65px at 45% 100%, rgba(93,175,93,.09) 0%, transparent 100%),
-    radial-gradient(ellipse 3px 75px at 55% 100%, rgba(93,175,93,.11) 0%, transparent 100%),
-    radial-gradient(ellipse 2px 55px at 62% 100%, rgba(93,175,93,.08) 0%, transparent 100%),
-    radial-gradient(ellipse 4px 85px at 72% 100%, rgba(93,175,93,.10) 0%, transparent 100%),
-    radial-gradient(ellipse 2px 60px at 82% 100%, rgba(93,175,93,.09) 0%, transparent 100%),
-    radial-gradient(ellipse 3px 70px at 90% 100%, rgba(93,175,93,.07) 0%, transparent 100%);
-  pointer-events: none;
-}
-/* Animated bokeh forest dots */
-.hero-particles {
-  position: absolute; inset: 0;
-  overflow: hidden;
-  pointer-events: none;
-}
-.bokeh {
-  position: absolute;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(143,214,143,.18) 0%, transparent 70%);
-  animation: bokeh-float linear infinite;
-}
-@keyframes bokeh-float {
-  0% { transform: translateY(0) scale(1); opacity: .6; }
-  50% { transform: translateY(-30px) scale(1.1); opacity: .3; }
-  100% { transform: translateY(0) scale(1); opacity: .6; }
-}
-.hero-content {
-  position: relative; z-index: 2;
-  max-width: 1200px; margin: 0 auto;
-  padding: 0 2rem 5rem;
-  width: 100%;
-}
-.hero-eyebrow {
-  display: inline-flex; align-items: center; gap: .5rem;
-  font-size: .75rem; font-weight: 600;
-  letter-spacing: .14em; text-transform: uppercase;
-  color: var(--lime);
-  margin-bottom: 1.5rem;
-}
-.hero-eyebrow-dot {
-  width: 7px; height: 7px; border-radius: 50%;
-  background: var(--sprout);
-  animation: pulse-dot 2.2s ease-in-out infinite;
-}
-@keyframes pulse-dot {
-  0%,100% { opacity:1; box-shadow:0 0 0 0 rgba(90,175,93,.5); }
-  50% { opacity:.8; box-shadow:0 0 0 6px rgba(90,175,93,0); }
-}
-.hero-h1 {
-  font-family: var(--font-disp);
-  font-size: clamp(44px, 6.5vw, 84px);
-  font-weight: 700; line-height: 1.06;
-  letter-spacing: -.025em;
-  max-width: 780px;
-  margin-bottom: 1.5rem;
-}
-.hero-h1 em {
-  font-style: italic;
-  background: linear-gradient(120deg, var(--lime), var(--sprout), var(--gold-lt));
-  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-.hero-body {
-  font-size: 1.15rem; font-weight: 400;
-  color: var(--text-mid); line-height: 1.75;
-  max-width: 600px; margin-bottom: 2.5rem;
-}
-.hero-links {
-  display: flex; gap: 1.5rem; flex-wrap: wrap;
-}
-.hero-link {
-  font-size: .9rem; font-weight: 600;
-  color: var(--lime);
-  display: inline-flex; align-items: center; gap: .4rem;
-  padding-bottom: 2px;
-  border-bottom: 1px solid rgba(143,214,143,.35);
-  transition: color .2s, border-color .2s;
-}
-.hero-link:hover { color: var(--white); border-color: var(--white); }
-.hero-link svg { transition: transform .2s; }
-.hero-link:hover svg { transform: translateX(3px); }
+    body {
+      margin: 0;
+      overflow-x: hidden;
+      font-family: "DM Sans", system-ui, sans-serif;
+      color: var(--cream);
+      background: var(--forest);
+      line-height: 1.55;
+    }
 
-/* ===== DIVIDER LINE ===== */
-.section-rule {
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(93,175,93,.2), transparent);
-  margin: 0;
-}
+    body.menu-open { overflow: hidden; }
 
-/* ===== INTRO SECTION ===== */
-#intro { padding: 6rem 0 5rem; }
-.intro-inner {
-  max-width: 780px;
-}
-.intro-inner p {
-  font-size: 1.2rem; line-height: 1.85;
-  color: rgba(255,255,255,.75);
-  margin-bottom: 1.5rem;
-}
-.intro-inner p:last-child { margin-bottom: 0; }
-.intro-inner strong { color: var(--white); font-weight: 600; }
+    img, svg { display: block; max-width: 100%; }
 
-/* ===== WORK PILLARS GRID ===== */
-#pillars { padding: 3rem 0 6rem; }
-.pillars-label {
-  font-size: .75rem; font-weight: 700;
-  letter-spacing: .16em; text-transform: uppercase;
-  color: var(--sprout);
-  margin-bottom: 2rem;
-  display: flex; align-items: center; gap: .6rem;
-}
-.pillars-label::after {
-  content: ''; flex: 1;
-  height: 1px; background: rgba(93,175,93,.2);
-}
-.pillars-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2px;
-}
-.pillar {
-  position: relative;
-  overflow: hidden;
-  aspect-ratio: 4/3;
-  background: var(--canopy);
-  cursor: pointer;
-}
-.pillar:first-child { grid-column: span 2; aspect-ratio: 8/3; }
-.pillar-visual {
-  position: absolute; inset: 0;
-  transition: transform .6s var(--ease);
-}
-.pillar:hover .pillar-visual { transform: scale(1.04); }
-/* Forest scene SVGs per pillar */
-.pillar-visual svg { width: 100%; height: 100%; }
-.pillar-overlay {
-  position: absolute; inset: 0;
-  background: linear-gradient(to top, rgba(13,31,15,.85) 0%, rgba(13,31,15,.2) 60%, transparent 100%);
-  transition: background .35s var(--ease);
-}
-.pillar:hover .pillar-overlay {
-  background: linear-gradient(to top, rgba(13,31,15,.9) 0%, rgba(13,31,15,.35) 70%, rgba(13,31,15,.05) 100%);
-}
-.pillar-content {
-  position: absolute; bottom: 0; left: 0; right: 0;
-  padding: 1.8rem;
-  z-index: 2;
-}
-.pillar-tag {
-  display: inline-block;
-  font-size: .7rem; font-weight: 700;
-  letter-spacing: .1em; text-transform: uppercase;
-  color: var(--lime);
-  background: rgba(93,175,93,.12);
-  border: 1px solid rgba(93,175,93,.25);
-  padding: .25rem .7rem;
-  border-radius: 3px;
-  margin-bottom: .75rem;
-}
-.pillar h3 {
-  font-family: var(--font-disp);
-  font-size: clamp(1.1rem, 2vw, 1.5rem);
-  font-weight: 700; line-height: 1.15;
-  margin-bottom: .5rem;
-  transition: color .2s;
-}
-.pillar:hover h3 { color: var(--lime); }
-.pillar p {
-  font-size: .85rem; color: var(--text-mid);
-  line-height: 1.55;
-  max-width: 360px;
-}
+    a { color: inherit; text-decoration: none; }
 
-/* ===== TOGETHER SECTION ===== */
-#together { padding: 6rem 0; background: var(--canopy); }
-.together-inner {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 5rem;
-  align-items: start;
-}
-.together-text .section-tag {
-  display: inline-flex; align-items: center; gap: .5rem;
-  font-size: .72rem; font-weight: 700;
-  letter-spacing: .15em; text-transform: uppercase;
-  color: var(--sprout);
-  margin-bottom: 1.5rem;
-}
-.together-text h2 {
-  font-family: var(--font-disp);
-  font-size: clamp(28px, 3.5vw, 44px);
-  font-weight: 700; line-height: 1.12;
-  letter-spacing: -.02em;
-  margin-bottom: 1.5rem;
-}
-.together-text p {
-  font-size: 1rem; line-height: 1.8;
-  color: var(--text-mid);
-  margin-bottom: 1.25rem;
-}
-.together-text p strong { color: var(--white); }
-.together-cta-row {
-  display: flex; gap: 1rem; flex-wrap: wrap;
-  margin-top: 2rem;
-}
-.btn-solid {
-  display: inline-flex; align-items: center; gap: .4rem;
-  padding: .8rem 1.8rem; border-radius: 4px;
-  font-size: .9rem; font-weight: 600;
-  background: var(--fern); color: var(--white);
-  transition: background .2s, transform .2s;
-}
-.btn-solid:hover { background: var(--moss); transform: translateY(-2px); }
-.btn-ghost {
-  display: inline-flex; align-items: center; gap: .4rem;
-  padding: .8rem 1.8rem; border-radius: 4px;
-  font-size: .9rem; font-weight: 600;
-  border: 1px solid rgba(93,175,93,.4);
-  color: var(--lime);
-  transition: border-color .2s, background .2s;
-}
-.btn-ghost:hover { border-color: var(--lime); background: rgba(93,175,93,.06); }
+    button, input, textarea, select {
+      font: inherit;
+    }
 
-.how-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1px;
-  background: var(--border);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  overflow: hidden;
-}
-.how-card {
-  background: var(--forest);
-  padding: 1.75rem 1.5rem;
-  transition: background .2s;
-  cursor: default;
-}
-.how-card:hover { background: rgba(30,70,32,.55); }
-.how-card-icon { font-size: 1.75rem; margin-bottom: .75rem; display: block; }
-.how-card-title {
-  font-family: var(--font-disp);
-  font-size: 1rem; font-weight: 700;
-  margin-bottom: .5rem;
-  color: var(--white);
-}
-.how-card-text {
-  font-size: .8rem; color: var(--text-mid); line-height: 1.55;
-}
+    .container {
+      width: min(100% - 32px, var(--max));
+      margin: 0 auto;
+    }
 
-/* ===== IMPACT NUMBERS ===== */
-#numbers { padding: 5rem 0; }
-.numbers-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0;
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  overflow: hidden;
-}
-.number-item {
-  padding: 3rem 2rem;
-  border-right: 1px solid var(--border);
-  text-align: center;
-  background: rgba(19,43,21,.4);
-  transition: background .25s;
-}
-.number-item:last-child { border-right: none; }
-.number-item:hover { background: rgba(45,106,48,.15); }
-.number-val {
-  font-family: var(--font-disp);
-  font-size: clamp(2.2rem, 4vw, 3rem);
-  font-weight: 700; line-height: 1;
-  display: block; margin-bottom: .6rem;
-  background: linear-gradient(120deg, var(--lime), var(--sprout));
-  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-.number-label { font-size: .85rem; color: var(--text-mid); line-height: 1.4; }
+    .section {
+      padding: 86px 0;
+      position: relative;
+    }
 
-/* ===== CALL TO ACTION STRIP ===== */
-#cta-strip {
-  padding: 4rem 0;
-  background: linear-gradient(135deg, var(--leaf), var(--moss));
-  position: relative; overflow: hidden;
-}
-#cta-strip::before {
-  content: '';
-  position: absolute; top: 0; right: -10%;
-  width: 500px; height: 500px;
-  background: radial-gradient(circle, rgba(255,255,255,.04) 0%, transparent 65%);
-  pointer-events: none;
-}
-.cta-strip-inner {
-  display: flex; justify-content: space-between; align-items: center;
-  gap: 2rem; flex-wrap: wrap;
-}
-.cta-strip-text h2 {
-  font-family: var(--font-disp);
-  font-size: clamp(1.4rem, 3vw, 2rem);
-  font-weight: 700; line-height: 1.2;
-  color: var(--white);
-  margin-bottom: .5rem;
-}
-.cta-strip-text p {
-  font-size: .95rem; color: rgba(255,255,255,.7);
-}
-.btn-cta {
-  display: inline-flex; align-items: center; gap: .5rem;
-  padding: .9rem 2.2rem; border-radius: 4px;
-  background: var(--gold); color: var(--forest);
-  font-size: .95rem; font-weight: 700;
-  white-space: nowrap;
-  transition: background .2s, transform .2s;
-  box-shadow: 0 4px 20px rgba(212,168,83,.3);
-}
-.btn-cta:hover { background: var(--gold-lt); transform: translateY(-2px); }
+    .eyebrow {
+      color: var(--gold-light);
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin: 0 0 12px;
+    }
 
-/* ===== STORIES (NEWS-LIKE) ===== */
-#stories { padding: 6rem 0; }
-.stories-header {
-  display: flex; justify-content: space-between; align-items: flex-end;
-  margin-bottom: 3rem;
-}
-.stories-header h2 {
-  font-family: var(--font-disp);
-  font-size: clamp(1.6rem, 3vw, 2.4rem);
-  font-weight: 700; letter-spacing: -.02em;
-}
-.see-all {
-  font-size: .875rem; font-weight: 600;
-  color: var(--sprout);
-  display: flex; align-items: center; gap: .3rem;
-  border-bottom: 1px solid rgba(93,175,93,.3);
-  padding-bottom: 1px;
-  transition: color .2s, border-color .2s;
-  white-space: nowrap;
-}
-.see-all:hover { color: var(--lime); border-color: var(--lime); }
-.stories-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-}
-.story-card {
-  background: var(--canopy);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  overflow: hidden;
-  transition: transform .3s var(--ease), box-shadow .3s var(--ease);
-}
-.story-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 16px 40px rgba(0,0,0,.4);
-  border-color: rgba(93,175,93,.2);
-}
-.story-visual {
-  height: 200px;
-  position: relative; overflow: hidden;
-}
-.story-visual svg { width: 100%; height: 100%; }
-.story-tag {
-  position: absolute; top: .75rem; left: .75rem;
-  font-size: .68rem; font-weight: 700;
-  letter-spacing: .08em; text-transform: uppercase;
-  background: rgba(13,31,15,.85);
-  color: var(--lime);
-  padding: .25rem .6rem; border-radius: 3px;
-  backdrop-filter: blur(8px);
-}
-.story-body { padding: 1.5rem; }
-.story-body h3 {
-  font-family: var(--font-disp);
-  font-size: 1.05rem; font-weight: 700;
-  line-height: 1.3; margin-bottom: .6rem;
-  transition: color .2s;
-}
-.story-card:hover .story-body h3 { color: var(--lime); }
-.story-body p {
-  font-size: .82rem; color: var(--text-mid); line-height: 1.55;
-  margin-bottom: 1rem;
-}
-.story-read {
-  font-size: .8rem; font-weight: 600;
-  color: var(--sprout);
-  display: inline-flex; align-items: center; gap: .3rem;
-  transition: color .2s;
-}
-.story-card:hover .story-read { color: var(--lime); }
+    h1, h2, h3 {
+      font-family: "Lora", Georgia, serif;
+      line-height: 1.08;
+      letter-spacing: 0;
+      margin: 0;
+    }
 
-/* ===== FOOTER ===== */
-footer {
-  background: var(--forest);
-  border-top: 1px solid rgba(93,175,93,.15);
-  padding: 4rem 0 2.5rem;
-}
-.footer-grid {
-  display: grid;
-  grid-template-columns: 2.2fr 1fr 1fr 1fr;
-  gap: 3rem;
-  margin-bottom: 3rem;
-}
-.footer-brand h3 {
-  font-family: var(--font-disp);
-  font-size: 1.1rem; font-weight: 700;
-  margin-bottom: .35rem;
-  display: flex; align-items: center; gap: .6rem;
-}
-.footer-brand p {
-  font-size: .82rem; color: var(--text-dim);
-  line-height: 1.65;
-  margin-bottom: .5rem;
-}
-.footer-brand a { color: var(--sprout); }
-.footer-brand a:hover { color: var(--lime); }
-.footer-col h4 {
-  font-size: .7rem; font-weight: 700;
-  letter-spacing: .14em; text-transform: uppercase;
-  color: var(--sprout);
-  margin-bottom: 1.1rem;
-}
-.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: .55rem; }
-.footer-col li a {
-  font-size: .85rem; color: var(--text-dim);
-  transition: color .2s;
-}
-.footer-col li a:hover { color: var(--lime); }
-.footer-bottom {
-  border-top: 1px solid var(--border);
-  padding-top: 2rem;
-  display: flex; flex-wrap: wrap;
-  justify-content: space-between; align-items: center;
-  gap: 1rem;
-  font-size: .78rem; color: var(--text-dim);
-}
-.footer-legal { display: flex; gap: 1.5rem; flex-wrap: wrap; }
-.footer-legal a { color: var(--text-dim); transition: color .2s; }
-.footer-legal a:hover { color: var(--lime); }
+    h1 {
+      font-size: clamp(3rem, 8vw, 6.9rem);
+      max-width: 1000px;
+    }
 
-/* ===== SCROLL REVEAL ===== */
-.reveal { opacity: 0; transform: translateY(36px); transition: opacity .7s var(--ease), transform .7s var(--ease); }
-.reveal.d1 { transition-delay: .1s; }
-.reveal.d2 { transition-delay: .2s; }
-.reveal.d3 { transition-delay: .3s; }
-.reveal.d4 { transition-delay: .4s; }
-.reveal.visible { opacity:1; transform:none; }
+    h2 {
+      font-size: clamp(2.1rem, 4.8vw, 4.2rem);
+      max-width: 900px;
+    }
 
-/* ===== RESPONSIVE ===== */
-@media (max-width: 1024px) {
-  .pillars-grid { grid-template-columns: 1fr 1fr; }
-  .pillar:first-child { grid-column: span 2; }
-  .together-inner { grid-template-columns: 1fr; gap: 3rem; }
-  .numbers-grid { grid-template-columns: repeat(2,1fr); }
-  .number-item:nth-child(2) { border-right: none; }
-  .footer-grid { grid-template-columns: 1fr 1fr; }
-}
-@media (max-width: 768px) {
-  .nav-links, .nav-cta { display: none; }
-  .hamburger { display: flex; }
-  .hero-h1 { font-size: clamp(36px, 10vw, 58px); }
-  .pillars-grid { grid-template-columns: 1fr; }
-  .pillar:first-child { grid-column: span 1; aspect-ratio: 4/3; }
-  .how-grid { grid-template-columns: 1fr; }
-  .numbers-grid { grid-template-columns: 1fr 1fr; }
-  .cta-strip-inner { flex-direction: column; text-align: center; }
-  .stories-grid { grid-template-columns: 1fr; }
-  .stories-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
-  .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
-}
-</style>
+    h3 { font-size: 1.35rem; }
+
+    p { margin: 0; color: var(--muted); }
+
+    .lead {
+      font-size: clamp(1.05rem, 2vw, 1.35rem);
+      max-width: 680px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 46px;
+      padding: 12px 20px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+      white-space: nowrap;
+    }
+
+    .btn:hover { transform: translateY(-2px); }
+    .btn.gold { background: var(--gold); color: var(--forest); }
+    .btn.ghost { border-color: rgba(245, 240, 232, 0.42); color: var(--cream); }
+    .btn.green { background: var(--fern); color: var(--white); }
+
+    .photo-slot {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: border-color 180ms ease, transform 260ms ease;
+    }
+
+    .photo-slot:hover {
+      border: 2px solid rgba(93, 175, 93, 0.2);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 700ms ease, transform 700ms ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .whatsapp-bubble {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 90;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: #25d366;
+      color: var(--white);
+      box-shadow: 0 14px 40px rgba(0, 0, 0, 0.35);
+      animation: pulse-ring 2.4s infinite;
+    }
+
+    .mobile-partner {
+      display: none;
+      position: fixed;
+      left: 14px;
+      bottom: 22px;
+      z-index: 90;
+      padding: 13px 17px;
+      border-radius: 999px;
+      background: var(--gold);
+      color: var(--forest);
+      font-weight: 800;
+      box-shadow: 0 14px 35px rgba(0, 0, 0, 0.28);
+    }
+
+    @keyframes pulse-ring {
+      0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5), 0 14px 40px rgba(0, 0, 0, 0.35); }
+      70% { box-shadow: 0 0 0 16px rgba(37, 211, 102, 0), 0 14px 40px rgba(0, 0, 0, 0.35); }
+      100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0), 0 14px 40px rgba(0, 0, 0, 0.35); }
+    }
+
+    .site-nav {
+      position: fixed;
+      inset: 0 0 auto 0;
+      z-index: 80;
+      padding: 16px 0;
+      transition: background 220ms ease, padding 220ms ease, border-color 220ms ease;
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid transparent;
+    }
+
+    .site-nav.scrolled {
+      padding: 10px 0;
+      background: rgba(13, 31, 15, 0.94);
+      border-bottom-color: var(--line);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+      font-family: "Lora", Georgia, serif;
+      font-weight: 700;
+      font-size: 1.05rem;
+    }
+
+    .brand svg { flex: 0 0 auto; }
+
+    .nav-links {
+      display: none;
+      align-items: center;
+      gap: 22px;
+      color: rgba(245, 240, 232, 0.86);
+      font-size: 0.95rem;
+    }
+
+    .nav-links a:hover { color: var(--gold-light); }
+
+    .nav-cta { display: none; }
+
+    .hamburger {
+      width: 44px;
+      height: 44px;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      background: rgba(19, 43, 21, 0.78);
+      color: var(--cream);
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+      position: relative;
+      z-index: 101;
+    }
+
+    .hamburger span,
+    .hamburger span::before,
+    .hamburger span::after {
+      display: block;
+      width: 18px;
+      height: 2px;
+      background: currentColor;
+      transition: transform 180ms ease, opacity 180ms ease;
+      content: "";
+    }
+
+    .hamburger span::before { transform: translateY(-6px); }
+    .hamburger span::after { transform: translateY(4px); }
+
+    .hamburger.active span { transform: rotate(45deg); }
+    .hamburger.active span::before { opacity: 0; }
+    .hamburger.active span::after { transform: translateY(-2px) rotate(-90deg); }
+
+    .mobile-menu {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      display: grid;
+      place-items: center;
+      background: rgba(13, 31, 15, 0.98);
+      transform: translateX(100%);
+      transition: transform 240ms ease;
+    }
+
+    .mobile-menu.open { transform: translateX(0); }
+
+    .mobile-menu nav {
+      display: grid;
+      gap: 22px;
+      text-align: center;
+      font-family: "Lora", Georgia, serif;
+      font-size: 2rem;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: flex-end;
+      padding: 130px 0 46px;
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    .hero-media {
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+    }
+
+    .hero-media img {
+      filter: saturate(1.05);
+      border: 0;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background:
+        linear-gradient(90deg, rgba(13, 31, 15, 0.94), rgba(13, 31, 15, 0.64) 52%, rgba(13, 31, 15, 0.42)),
+        linear-gradient(0deg, var(--forest), rgba(13, 31, 15, 0.18) 42%);
+    }
+
+    .hero-content {
+      display: grid;
+      gap: 28px;
+    }
+
+    .hero h1 em {
+      color: var(--gold-light);
+      font-style: italic;
+      font-weight: 400;
+    }
+
+    .hero-actions,
+    .cta-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .trust-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 18px;
+      color: rgba(245, 240, 232, 0.82);
+      font-size: 0.92rem;
+    }
+
+    .counter-strip {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1px;
+      background: rgba(200, 230, 201, 0.16);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+      width: min(100%, 890px);
+    }
+
+    .counter-item {
+      padding: 18px;
+      background: rgba(19, 43, 21, 0.72);
+    }
+
+    .counter-value {
+      display: block;
+      font-family: "Lora", Georgia, serif;
+      font-size: clamp(1.8rem, 5vw, 3rem);
+      color: var(--gold-light);
+      line-height: 1;
+    }
+
+    .counter-label {
+      color: rgba(245, 240, 232, 0.72);
+      font-size: 0.88rem;
+      margin-top: 6px;
+    }
+
+    .ticker {
+      background: var(--gold);
+      color: var(--forest);
+      overflow: hidden;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .ticker-track {
+      display: inline-flex;
+      width: max-content;
+      animation: marquee 26s linear infinite;
+    }
+
+    .ticker-track span { padding: 12px 28px; }
+
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    .impact-snapshot {
+      padding: 48px 0 0;
+      background: var(--forest);
+    }
+
+    .impact-banner {
+      height: clamp(220px, 38vw, 500px);
+      overflow: hidden;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+
+    .section-head {
+      display: grid;
+      gap: 18px;
+      margin-bottom: 38px;
+    }
+
+    .section-head.center {
+      text-align: center;
+      justify-items: center;
+    }
+
+    .steps-grid,
+    .programme-grid,
+    .species-grid,
+    .focus-grid,
+    .gallery-grid,
+    .story-grid,
+    .team-grid,
+    .membership-grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .card {
+      background: linear-gradient(180deg, rgba(30, 70, 32, 0.82), rgba(19, 43, 21, 0.92));
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 16px 42px rgba(0, 0, 0, 0.16);
+    }
+
+    .step-card {
+      min-height: 286px;
+      padding: 24px;
+      position: relative;
+    }
+
+    .step-number {
+      position: absolute;
+      top: 10px;
+      right: 18px;
+      font-family: "Lora", Georgia, serif;
+      font-size: 4.6rem;
+      color: rgba(212, 168, 83, 0.14);
+      line-height: 1;
+    }
+
+    .icon-wrap {
+      width: 62px;
+      height: 62px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: rgba(212, 168, 83, 0.12);
+      border: 1px solid rgba(212, 168, 83, 0.28);
+      margin-bottom: 26px;
+    }
+
+    .step-card h3,
+    .focus-card h3,
+    .programme-card h3,
+    .species-card h3,
+    .membership-card h3 {
+      margin-bottom: 10px;
+    }
+
+    .programme-card {
+      padding: 28px;
+      position: relative;
+    }
+
+    .programme-card.featured {
+      border-color: rgba(212, 168, 83, 0.7);
+      background: linear-gradient(180deg, rgba(45, 106, 48, 0.92), rgba(19, 43, 21, 0.96));
+    }
+
+    .ribbon {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      color: var(--forest);
+      background: var(--gold-light);
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 0.74rem;
+      font-weight: 800;
+    }
+
+    .price {
+      margin: 18px 0 18px;
+      color: var(--gold-light);
+      font-family: "Lora", Georgia, serif;
+      font-size: 2.2rem;
+      line-height: 1;
+    }
+
+    .price small {
+      font-family: "DM Sans", system-ui, sans-serif;
+      font-size: 0.9rem;
+      color: rgba(245, 240, 232, 0.66);
+    }
+
+    .check-list {
+      display: grid;
+      gap: 12px;
+      margin: 22px 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .check-list li {
+      display: grid;
+      grid-template-columns: 22px 1fr;
+      gap: 10px;
+      color: rgba(245, 240, 232, 0.82);
+    }
+
+    .check-list svg { color: var(--gold-light); margin-top: 3px; }
+
+    .fine-print {
+      margin-top: 24px;
+      text-align: center;
+      color: rgba(245, 240, 232, 0.72);
+    }
+
+    .species-card,
+    .focus-card,
+    .membership-card {
+      padding: 22px;
+    }
+
+    .species-icon {
+      width: 58px;
+      height: 58px;
+      margin-bottom: 16px;
+    }
+
+    .species-card h3 span {
+      color: var(--gold-light);
+      font-family: "DM Sans", system-ui, sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .focus-card {
+      display: grid;
+      grid-template-columns: 52px 1fr;
+      gap: 16px;
+    }
+
+    .project-sites {
+      display: grid;
+      gap: 18px;
+      margin-top: 24px;
+    }
+
+    .project-card {
+      min-height: 250px;
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+    }
+
+    .project-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(0deg, rgba(13, 31, 15, 0.88), rgba(13, 31, 15, 0.08));
+    }
+
+    .project-card div {
+      position: absolute;
+      left: 18px;
+      right: 18px;
+      bottom: 18px;
+      z-index: 1;
+    }
+
+    .gallery-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .gallery-item,
+    .story-image {
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      background: var(--canopy);
+    }
+
+    .gallery-item { aspect-ratio: 3 / 2; }
+
+    .gallery-item::after {
+      content: attr(data-location);
+      position: absolute;
+      inset: auto 12px 12px 12px;
+      padding: 10px 12px;
+      border-radius: var(--radius);
+      background: rgba(13, 31, 15, 0.82);
+      color: var(--cream);
+      font-weight: 800;
+      transform: translateY(8px);
+      opacity: 0;
+      transition: opacity 180ms ease, transform 180ms ease;
+    }
+
+    .gallery-item:hover::after {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .gallery-item:hover img,
+    .project-card:hover img,
+    .story-card:hover img {
+      transform: scale(1.04);
+    }
+
+    .text-link {
+      display: inline-flex;
+      margin-top: 22px;
+      color: var(--gold-light);
+      font-weight: 800;
+    }
+
+    .why-grid {
+      display: grid;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .why-photo {
+      min-height: 360px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--line);
+    }
+
+    .why-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      align-content: center;
+    }
+
+    .why-list .check-list {
+      margin: 0;
+      padding: 24px;
+      background: rgba(19, 43, 21, 0.62);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+    }
+
+    .story-card {
+      display: grid;
+      grid-template-rows: 220px 1fr;
+    }
+
+    .story-body {
+      padding: 20px;
+    }
+
+    .tag {
+      display: inline-flex;
+      margin-bottom: 12px;
+      border-radius: 999px;
+      padding: 6px 10px;
+      background: rgba(212, 168, 83, 0.13);
+      color: var(--gold-light);
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .team-card {
+      padding: 28px;
+      text-align: center;
+    }
+
+    .team-photo {
+      width: 180px;
+      height: 180px;
+      margin: 0 auto 20px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 2px solid rgba(212, 168, 83, 0.42);
+    }
+
+    .team-role {
+      color: var(--gold-light);
+      font-weight: 800;
+      margin: 5px 0 12px;
+    }
+
+    .membership-card .price {
+      font-size: 1.8rem;
+    }
+
+    .contact-grid {
+      display: grid;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .contact-panel,
+    .contact-form {
+      padding: 26px;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      background: rgba(19, 43, 21, 0.72);
+    }
+
+    .contact-panel dl {
+      display: grid;
+      gap: 16px;
+      margin: 24px 0;
+    }
+
+    .contact-panel dt {
+      color: var(--gold-light);
+      font-weight: 800;
+    }
+
+    .contact-panel dd {
+      margin: 4px 0 0;
+      color: rgba(245, 240, 232, 0.82);
+    }
+
+    .contact-form {
+      display: grid;
+      gap: 14px;
+    }
+
+    .field {
+      display: grid;
+      gap: 7px;
+    }
+
+    label {
+      color: rgba(245, 240, 232, 0.84);
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      border: 1px solid rgba(200, 230, 201, 0.18);
+      border-radius: var(--radius);
+      background: rgba(13, 31, 15, 0.82);
+      color: var(--cream);
+      padding: 13px 14px;
+      outline: none;
+    }
+
+    input:focus, textarea:focus, select:focus {
+      border-color: var(--gold-light);
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .cta-strip {
+      padding: 34px 0;
+      background: linear-gradient(100deg, var(--forest), var(--moss));
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .cta-inner {
+      display: grid;
+      gap: 18px;
+      align-items: center;
+    }
+
+    .cta-inner h2 {
+      font-size: clamp(1.6rem, 3vw, 2.5rem);
+    }
+
+    .site-footer {
+      position: relative;
+      padding: 62px 0 30px;
+      overflow: hidden;
+      background: #081409;
+    }
+
+    .footer-leaf {
+      position: absolute;
+      right: -42px;
+      bottom: -48px;
+      width: 260px;
+      color: rgba(90, 175, 93, 0.08);
+      pointer-events: none;
+    }
+
+    .footer-grid {
+      display: grid;
+      gap: 28px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .footer-col h3 {
+      margin-bottom: 14px;
+      font-size: 1rem;
+      color: var(--gold-light);
+    }
+
+    .footer-col ul {
+      display: grid;
+      gap: 10px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      color: rgba(245, 240, 232, 0.75);
+    }
+
+    .copyright {
+      position: relative;
+      z-index: 1;
+      margin-top: 38px;
+      padding-top: 22px;
+      border-top: 1px solid var(--line);
+      color: rgba(245, 240, 232, 0.62);
+      font-size: 0.9rem;
+    }
+
+    .dark-band { background: linear-gradient(180deg, var(--forest), var(--canopy)); }
+    .leaf-band { background: linear-gradient(180deg, var(--canopy), var(--forest)); }
+
+    @media (max-width: 767px) {
+      .mobile-partner { display: inline-flex; }
+      .whatsapp-bubble { right: 16px; bottom: 84px; }
+      .hero-actions .btn { width: 100%; }
+      .brand span { max-width: 220px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    }
+
+    @media (min-width: 768px) {
+      .section { padding: 104px 0; }
+      .counter-strip { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+      .steps-grid, .programme-grid, .focus-grid, .story-grid, .membership-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .steps-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+      .species-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+      .gallery-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .project-sites { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .team-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 760px; margin: 0 auto; }
+      .why-grid { grid-template-columns: 0.9fr 1fr 1fr; }
+      .contact-grid { grid-template-columns: 0.86fr 1.14fr; }
+      .cta-inner { grid-template-columns: 1fr auto; }
+      .footer-grid { grid-template-columns: 1.35fr repeat(3, 1fr); }
+    }
+
+    @media (min-width: 1024px) {
+      .nav-links, .nav-cta { display: flex; }
+      .hamburger { display: none; }
+      .brand { font-size: 1.22rem; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.001ms !important;
+      }
+      .reveal { opacity: 1; transform: none; }
+    }
+  </style>
 </head>
 <body>
+  <!--
+  ==========================================================
+  PHOTO SLOTS — HOW TO ADD YOUR PHOTOS
+  ==========================================================
+  Find each slot by searching for data-slot="[name]"
+  Replace the src="" with your image path or URL.
+  All slots use object-fit: cover — any aspect ratio works.
 
-<!-- NAV -->
-<nav id="navbar">
-  <a href="/" class="nav-logo" aria-label="Bengal Tree Foundation home">
-    <div class="nav-leaf" aria-hidden="true">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-        <path d="M12 22V11M12 11C12 11 7.5 8 7.5 4.5C7.5 2.57 9.51 1 12 1s4.5 1.57 4.5 3.5C16.5 8 12 11 12 11Z" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
-        <path d="M12 11C12 11 8.5 13 7 17M12 11C12 11 15.5 13 17 17" stroke="rgba(255,255,255,.75)" stroke-width="1.5" stroke-linecap="round"/>
-      </svg>
-    </div>
-    Bengal Tree Foundation
+  SLOT LIST:
+    data-slot="hero-plantation"          → Hero background (1200×600 ideal)
+    data-slot="gallery-1"                → Gallery grid photo 1 (600×400)
+    data-slot="gallery-2"                → Gallery grid photo 2 (600×400)
+    data-slot="gallery-3"                → Gallery grid photo 3 (600×400)
+    data-slot="gallery-4"                → Gallery grid photo 4 (600×400)
+    data-slot="gallery-5"                → Gallery grid photo 5 (600×400)
+    data-slot="gallery-6"                → Gallery grid photo 6 (600×400)
+    data-slot="team-partha"              → Partha Mitra headshot (300×300)
+    data-slot="team-ayan"                → Ayan Sen headshot (300×300)
+    data-slot="project-barasat-hospital" → Barasat Hospital project (800×500)
+    data-slot="project-vip-road"         → VIP Road Kolkata plantation (800×500)
+    data-slot="project-school"           → School plantation (800×500)
+    data-slot="impact-banner"            → Wide impact banner (1400×500)
+    data-slot="csr-partnership"          → Corporate event photo (600×400)
+    data-slot="story-1"                  → Story card 1 (420×200)
+    data-slot="story-2"                  → Story card 2 (420×200)
+    data-slot="story-3"                  → Story card 3 (420×200)
+  ==========================================================
+  -->
+
+  <a class="whatsapp-bubble" href="https://wa.me/918420770834" target="_blank" rel="noopener" aria-label="Chat with Bengal Tree Foundation on WhatsApp">
+    <svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true">
+      <path fill="currentColor" d="M16.03 3.2A12.74 12.74 0 0 0 5.06 22.42L3.4 28.8l6.54-1.58A12.73 12.73 0 1 0 16.03 3.2Zm0 22.9c-2.04 0-3.94-.6-5.54-1.64l-.4-.25-3.88.94 1-3.78-.27-.42a10.1 10.1 0 1 1 9.09 5.15Zm5.55-7.57c-.3-.15-1.8-.9-2.08-1-.28-.1-.48-.15-.69.15-.2.3-.79 1-.97 1.2-.18.2-.36.23-.66.08-.3-.15-1.28-.47-2.43-1.5-.9-.8-1.51-1.79-1.69-2.1-.18-.3-.02-.46.13-.61.14-.14.3-.36.46-.54.15-.18.2-.3.3-.5.1-.2.05-.38-.03-.53-.08-.15-.69-1.66-.94-2.27-.25-.6-.5-.51-.69-.52h-.58c-.2 0-.53.08-.81.38-.28.3-1.06 1.04-1.06 2.53s1.09 2.94 1.24 3.14c.15.2 2.15 3.28 5.2 4.6.73.31 1.3.5 1.74.64.73.23 1.4.2 1.93.12.59-.09 1.8-.73 2.05-1.44.25-.71.25-1.32.18-1.44-.08-.13-.28-.2-.58-.35Z"/>
+    </svg>
   </a>
-  <ul class="nav-links">
-    <li><a href="#intro">Our Work</a></li>
-    <li><a href="#pillars">Programmes</a></li>
-    <li><a href="#together">Partnerships</a></li>
-    <li><a href="#stories">Stories</a></li>
-    <li><a href="#footer">About</a></li>
-  </ul>
-  <div class="nav-cta">
-    <a href="#contact" class="btn-nav">Partner With Us</a>
-  </div>
-  <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
+  <a class="mobile-partner" href="#contact">Partner With Us</a>
 
-<!-- MOBILE MENU -->
-<nav class="mob-menu" id="mobMenu">
-  <a href="#intro">Our Work</a>
-  <a href="#pillars">Programmes</a>
-  <a href="#together">Partnerships</a>
-  <a href="#stories">Stories</a>
-  <a href="#footer" style="color:var(--lime)">Partner With Us →</a>
-</nav>
-
-<!-- HERO -->
-<section id="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-trees"></div>
-  <div class="hero-particles" id="heroParticles"></div>
-  <div class="hero-content">
-    <div class="hero-eyebrow">
-      <span class="hero-eyebrow-dot"></span>
-      Reg. IV-190100727/2024 · Kolkata, West Bengal
+  <header class="site-nav" id="siteNav">
+    <div class="container nav-inner">
+      <a class="brand" href="#home" aria-label="Bengal Tree Foundation home">
+        <svg width="38" height="38" viewBox="0 0 48 48" aria-hidden="true">
+          <circle cx="24" cy="24" r="22" fill="#132b15" stroke="#d4a853" stroke-width="2"/>
+          <path d="M24 36V22" stroke="#d4a853" stroke-width="3" stroke-linecap="round"/>
+          <path d="M24 22c-8-1-11-6-12-13 8 0 13 4 12 13Z" fill="#5aaf5d"/>
+          <path d="M24 22c8-1 11-6 12-13-8 0-13 4-12 13Z" fill="#8fd68f"/>
+        </svg>
+        <span>Bengal Tree Foundation</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#home">Home</a>
+        <a href="#work">Our Work</a>
+        <a href="#programmes">Programmes</a>
+        <a href="#csr">CSR Partners</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#stories">Stories</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="btn gold nav-cta" href="#programmes">Plant a Tree</a>
+      <button class="hamburger" id="menuButton" aria-label="Open mobile menu" aria-expanded="false" aria-controls="mobileMenu"><span></span></button>
     </div>
-    <h1 class="hero-h1">
-      Our work starts with<br><em>planting trees</em> that<br>outlast us all.
-    </h1>
-    <p class="hero-body">
-      At Bengal Tree Foundation, we believe a greener Bengal begins one certified fruit tree at a time — GPS-documented, science-backed, and planted in the places that matter most.
-    </p>
-    <div class="hero-links">
-      <a href="#intro" class="hero-link">
-        About our work
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
-      <a href="#pillars" class="hero-link">
-        Explore programmes
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
-    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <nav aria-label="Mobile navigation">
+      <a href="#home">Home</a>
+      <a href="#work">Our Work</a>
+      <a href="#programmes">Programmes</a>
+      <a href="#csr">CSR Partners</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#stories">Stories</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </div>
-</section>
 
-<div class="section-rule"></div>
-
-<!-- INTRO -->
-<section id="intro">
-  <div class="container">
-    <div class="intro-inner reveal">
-      <p>Bengal Tree Foundation's work begins with a commitment to planting in the most critical urban and peri-urban green spaces across Kolkata and North 24 Parganas — where canopy cover is thin, communities are large, and every tree planted becomes a measurable act of restoration.</p>
-      <p>By addressing the <strong>"whole of a place"</strong> — its ecology, neighbourhood infrastructure, community need, and corporate sustainability goals — BTF creates scalable CSR tree plantation solutions that are rigourously documented, fully Schedule VII compliant, and built to last twelve months and beyond.</p>
-    </div>
-  </div>
-</section>
-
-<!-- PILLARS GRID -->
-<section id="pillars">
-  <div class="container">
-    <div class="pillars-label reveal">What we plant &amp; where</div>
-    <div class="pillars-grid">
-
-      <!-- 1 — Full-width hero pillar: Fruit Trees -->
-      <a href="#programmes" class="pillar">
-        <div class="pillar-visual">
-          <svg viewBox="0 0 900 338" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
-            <defs>
-              <radialGradient id="sky1" cx="50%" cy="30%" r="80%"><stop offset="0%" stop-color="#1a3e1c"/><stop offset="100%" stop-color="#0d1f0f"/></radialGradient>
-              <radialGradient id="canopy1" cx="50%" cy="0%" r="100%"><stop offset="0%" stop-color="#2d6a30"/><stop offset="100%" stop-color="#1a3e1c"/></radialGradient>
-            </defs>
-            <rect width="900" height="338" fill="url(#sky1)"/>
-            <!-- Ground -->
-            <ellipse cx="450" cy="330" rx="500" ry="30" fill="#132b15"/>
-            <!-- Trees row -->
-            <g opacity=".7">
-              <!-- Tree 1 -->
-              <rect x="80" y="180" width="12" height="120" rx="3" fill="#3d5c20"/>
-              <ellipse cx="86" cy="165" rx="48" ry="52" fill="#2d6a30"/>
-              <ellipse cx="70" cy="180" rx="30" ry="35" fill="#3d8c40"/>
-              <ellipse cx="102" cy="172" rx="28" ry="32" fill="#3d8c40"/>
-              <!-- Tree 2 -->
-              <rect x="200" y="200" width="10" height="100" rx="3" fill="#3d5c20"/>
-              <ellipse cx="205" cy="185" rx="40" ry="44" fill="#2d6a30"/>
-              <ellipse cx="190" cy="198" rx="24" ry="28" fill="#3d8c40"/>
-              <!-- Tree 3 (big center) -->
-              <rect x="420" y="140" width="16" height="160" rx="4" fill="#2a4a18"/>
-              <ellipse cx="428" cy="115" rx="72" ry="80" fill="#1e5922"/>
-              <ellipse cx="400" cy="130" rx="50" ry="58" fill="#2d7a30"/>
-              <ellipse cx="458" cy="122" rx="48" ry="55" fill="#2d7a30"/>
-              <ellipse cx="428" cy="100" rx="42" ry="48" fill="#3d9a40"/>
-              <!-- Tree 4 -->
-              <rect x="600" y="185" width="11" height="115" rx="3" fill="#3d5c20"/>
-              <ellipse cx="605" cy="170" rx="44" ry="48" fill="#2d6a30"/>
-              <ellipse cx="622" cy="182" rx="26" ry="30" fill="#3d8c40"/>
-              <!-- Tree 5 -->
-              <rect x="750" y="195" width="10" height="105" rx="3" fill="#3d5c20"/>
-              <ellipse cx="755" cy="180" rx="38" ry="42" fill="#2d6a30"/>
-              <ellipse cx="738" cy="195" rx="22" ry="26" fill="#3d8c40"/>
-            </g>
-            <!-- Glow -->
-            <ellipse cx="428" cy="120" rx="100" ry="30" fill="rgba(93,175,93,.05)"/>
-            <!-- Fruit dots -->
-            <circle cx="404" cy="142" r="5" fill="#d4a853" opacity=".8"/>
-            <circle cx="440" cy="108" r="4" fill="#d4a853" opacity=".7"/>
-            <circle cx="420" cy="125" r="3" fill="#e8785a" opacity=".75"/>
-            <circle cx="452" cy="135" r="4" fill="#8fd68f" opacity=".8"/>
-            <circle cx="415" cy="95" r="3.5" fill="#d4a853" opacity=".6"/>
-          </svg>
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-media">
+        <!-- PHOTO SLOT: hero-plantation -->
+        <!-- Replace src below with your actual image path or URL -->
+        <img src="https://placehold.co/1200x600/132b15/5aaf5d?text=PHOTO%3A+Hero+Plantation+Drive" alt="Bengal Tree Foundation plantation drive with community members planting saplings" class="photo-slot" data-slot="hero-plantation" loading="eager" />
+      </div>
+      <div class="container hero-content">
+        <p class="eyebrow reveal">CSR tree plantation partner in Kolkata</p>
+        <h1 class="reveal">Bengal is greening,<br><em>one certified tree at a time.</em></h1>
+        <p class="lead reveal">GPS-verified. Schedule VII compliant. 85%+ survival guaranteed.</p>
+        <div class="hero-actions reveal">
+          <a class="btn gold" href="#programmes">Plant a Tree for Your Company →</a>
+          <a class="btn ghost" href="https://wa.me/918420770834" target="_blank" rel="noopener">Schedule a Discovery Call</a>
         </div>
-        <div class="pillar-overlay"></div>
-        <div class="pillar-content">
-          <span class="pillar-tag">Core programme</span>
-          <h3>Fruit Tree Plantation</h3>
-          <p>8 certified native species — Mango, Guava, Jamun, Amla, Jackfruit, Lemon, Bel, Chikoo — minimum 7–8 ft nursery-raised saplings planted at scale across Kolkata.</p>
+        <div class="trust-badges reveal">
+          <span>✓ Reg. IV-190100727/2024</span>
+          <span>✓ 80G &amp; 12A Certified</span>
+          <span>✓ Schedule VII CSR</span>
         </div>
-      </a>
-
-      <!-- 2 — Urban Green Cover -->
-      <a href="#pillars" class="pillar">
-        <div class="pillar-visual">
-          <svg viewBox="0 0 450 340" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
-            <defs>
-              <radialGradient id="sky2" cx="50%" cy="20%" r="90%"><stop offset="0%" stop-color="#1a3e1c"/><stop offset="100%" stop-color="#0d1f0f"/></radialGradient>
-            </defs>
-            <rect width="450" height="340" fill="url(#sky2)"/>
-            <!-- City silhouette -->
-            <rect x="20" y="230" width="40" height="90" rx="2" fill="#132b15" opacity=".9"/>
-            <rect x="30" y="210" width="20" height="20" rx="2" fill="#132b15" opacity=".9"/>
-            <rect x="80" y="200" width="55" height="130" rx="2" fill="#132b15" opacity=".85"/>
-            <rect x="90" y="185" width="35" height="15" rx="1" fill="#1a3e1c" opacity=".9"/>
-            <rect x="350" y="220" width="50" height="110" rx="2" fill="#132b15" opacity=".85"/>
-            <rect x="355" y="205" width="40" height="15" rx="1" fill="#1a3e1c" opacity=".9"/>
-            <!-- Street tree -->
-            <rect x="213" y="200" width="14" height="130" rx="4" fill="#2a4a18"/>
-            <ellipse cx="220" cy="175" rx="65" ry="72" fill="#1e5922"/>
-            <ellipse cx="195" cy="192" rx="45" ry="50" fill="#2d7a30"/>
-            <ellipse cx="248" cy="183" rx="42" ry="48" fill="#2d7a30"/>
-            <ellipse cx="220" cy="158" rx="38" ry="44" fill="#4a9e4d"/>
-            <!-- Road -->
-            <rect x="0" y="310" width="450" height="30" fill="#0d1f0f"/>
-            <rect x="100" y="324" width="50" height="3" rx="1" fill="rgba(255,255,255,.06)"/>
-            <rect x="200" y="324" width="50" height="3" rx="1" fill="rgba(255,255,255,.06)"/>
-            <rect x="300" y="324" width="50" height="3" rx="1" fill="rgba(255,255,255,.06)"/>
-          </svg>
-        </div>
-        <div class="pillar-overlay"></div>
-        <div class="pillar-content">
-          <span class="pillar-tag">Urban focus</span>
-          <h3>Urban Green Cover</h3>
-          <p>Roadside belts, park boundaries, and median strips turned into living corridors across KMC and panchayat zones.</p>
-        </div>
-      </a>
-
-      <!-- 3 — Community & Schools -->
-      <a href="#pillars" class="pillar">
-        <div class="pillar-visual">
-          <svg viewBox="0 0 450 340" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
-            <defs><radialGradient id="sky3" cx="40%" cy="25%" r="85%"><stop offset="0%" stop-color="#1e4620"/><stop offset="100%" stop-color="#0d1f0f"/></radialGradient></defs>
-            <rect width="450" height="340" fill="url(#sky3)"/>
-            <!-- School building -->
-            <rect x="140" y="200" width="170" height="110" rx="4" fill="#132b15" opacity=".95"/>
-            <polygon points="140,200 225,155 310,200" fill="#1a3e1c" opacity=".95"/>
-            <rect x="200" y="255" width="50" height="55" rx="2" fill="#0d1f0f"/>
-            <rect x="155" y="215" width="30" height="25" rx="2" fill="#0d1f0f" opacity=".6"/>
-            <rect x="265" y="215" width="30" height="25" rx="2" fill="#0d1f0f" opacity=".6"/>
-            <!-- People silhouettes -->
-            <circle cx="100" cy="260" r="10" fill="#2d6a30" opacity=".7"/>
-            <rect x="94" y="270" width="12" height="30" rx="4" fill="#2d6a30" opacity=".7"/>
-            <circle cx="355" cy="258" r="10" fill="#2d6a30" opacity=".7"/>
-            <rect x="349" y="268" width="12" height="30" rx="4" fill="#2d6a30" opacity=".7"/>
-            <!-- Small tree -->
-            <rect x="68" y="265" width="8" height="65" rx="3" fill="#2a4a18"/>
-            <ellipse cx="72" cy="250" rx="30" ry="34" fill="#2d7a30"/>
-            <rect x="372" y="260" width="8" height="60" rx="3" fill="#2a4a18"/>
-            <ellipse cx="376" cy="246" rx="30" ry="34" fill="#2d7a30"/>
-            <!-- Ground -->
-            <rect x="0" y="310" width="450" height="30" fill="#0d1f0f"/>
-          </svg>
-        </div>
-        <div class="pillar-overlay"></div>
-        <div class="pillar-content">
-          <span class="pillar-tag">Schools &amp; communities</span>
-          <h3>Community Plantation</h3>
-          <p>Government schools, hospital campuses, and gram sabha land turned into educational green spaces for children and neighbours alike.</p>
-        </div>
-      </a>
-
-      <!-- 4 — Bird Conservation -->
-      <a href="#pillars" class="pillar">
-        <div class="pillar-visual">
-          <svg viewBox="0 0 450 340" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
-            <defs><radialGradient id="sky4" cx="60%" cy="15%" r="90%"><stop offset="0%" stop-color="#1a3e1c"/><stop offset="100%" stop-color="#0b1a0d"/></radialGradient></defs>
-            <rect width="450" height="340" fill="url(#sky4)"/>
-            <!-- Moon/sun -->
-            <circle cx="350" cy="80" r="30" fill="rgba(212,168,83,.1)"/>
-            <circle cx="350" cy="80" r="22" fill="rgba(212,168,83,.07)"/>
-            <!-- Big tree -->
-            <rect x="175" y="180" width="16" height="140" rx="4" fill="#2a4a18"/>
-            <ellipse cx="183" cy="155" rx="80" ry="90" fill="#1a4d1c"/>
-            <ellipse cx="155" cy="172" rx="55" ry="62" fill="#2d6a30"/>
-            <ellipse cx="214" cy="163" rx="52" ry="58" fill="#2d6a30"/>
-            <ellipse cx="183" cy="138" rx="48" ry="54" fill="#3d8c40"/>
-            <!-- Birds -->
-            <g opacity=".9">
-              <path d="M280 100 q6-8 12-4 q6 4 12-4" stroke="#8fd68f" stroke-width="2" fill="none" stroke-linecap="round"/>
-              <path d="M310 120 q5-7 10-3 q5 3 10-3" stroke="#8fd68f" stroke-width="1.8" fill="none" stroke-linecap="round"/>
-              <path d="M240 145 q5-7 10-3 q5 3 10-3" stroke="#8fd68f" stroke-width="1.8" fill="none" stroke-linecap="round"/>
-              <path d="M340 90 q4-5 8-2 q4 2 8-2" stroke="rgba(143,214,143,.6)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-              <path d="M260 168 q4-5 8-2 q4 2 8-2" stroke="rgba(143,214,143,.6)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-            </g>
-            <!-- Ground -->
-            <rect x="0" y="310" width="450" height="30" fill="#0d1f0f"/>
-          </svg>
-        </div>
-        <div class="pillar-overlay"></div>
-        <div class="pillar-content">
-          <span class="pillar-tag">Biodiversity</span>
-          <h3>Bird Conservation</h3>
-          <p>Fruit-bearing canopy creates habitat corridors and year-round food sources for urban bird species across North 24 Parganas.</p>
-        </div>
-      </a>
-
-      <!-- 5 — CSR & ESG -->
-      <a href="#together" class="pillar">
-        <div class="pillar-visual">
-          <svg viewBox="0 0 450 340" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
-            <defs><radialGradient id="sky5" cx="50%" cy="30%" r="85%"><stop offset="0%" stop-color="#1a3e1c"/><stop offset="100%" stop-color="#0d1f0f"/></radialGradient></defs>
-            <rect width="450" height="340" fill="url(#sky5)"/>
-            <!-- Corporate/document glyph in green -->
-            <rect x="155" y="100" width="140" height="180" rx="8" fill="rgba(45,106,48,.2)" stroke="rgba(93,175,93,.2)" stroke-width="1"/>
-            <rect x="175" y="125" width="60" height="6" rx="3" fill="rgba(143,214,143,.25)"/>
-            <rect x="175" y="142" width="100" height="4" rx="2" fill="rgba(143,214,143,.15)"/>
-            <rect x="175" y="157" width="80" height="4" rx="2" fill="rgba(143,214,143,.15)"/>
-            <rect x="175" y="172" width="90" height="4" rx="2" fill="rgba(143,214,143,.15)"/>
-            <!-- Check mark -->
-            <circle cx="225" cy="220" r="28" fill="rgba(61,140,64,.2)" stroke="rgba(93,175,93,.35)" stroke-width="1.5"/>
-            <path d="M212 220 l9 9 l16-18" stroke="#8fd68f" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-            <!-- Leaf accent -->
-            <path d="M330 80 q30-40 10-70 q-20 30 10 70z" fill="rgba(93,175,93,.15)"/>
-            <path d="M330 80 q-5-40 10-70" stroke="rgba(93,175,93,.2)" stroke-width="1" fill="none"/>
-            <!-- Ground -->
-            <rect x="0" y="310" width="450" height="30" fill="#0d1f0f"/>
-          </svg>
-        </div>
-        <div class="pillar-overlay"></div>
-        <div class="pillar-content">
-          <span class="pillar-tag">Corporate CSR</span>
-          <h3>ESG &amp; Schedule VII</h3>
-          <p>Full compliance documentation — 80G, 12A, Form CSR-1, CA-certified utilisation certificate — built for India's corporate filing requirements.</p>
-        </div>
-      </a>
-
-    </div>
-  </div>
-</section>
-
-<!-- TOGETHER SECTION -->
-<section id="together">
-  <div class="container">
-    <div class="together-inner">
-      <div class="together-text reveal">
-        <div class="section-tag">
-          <svg width="8" height="8" viewBox="0 0 8 8" fill="currentColor"><circle cx="4" cy="4" r="4"/></svg>
-          Together for Bengal
-        </div>
-        <h2>Science, community, and corporate purpose — rooted in the same soil.</h2>
-        <p>Our plantation programmes combine GPS-precision field science with local community partnerships and measurable corporate ESG outcomes. Everywhere we plant, BTF and its partners are devoted to trees that actually survive, grow, and give back.</p>
-        <p>This includes working with <strong>KMC and gram panchayats</strong> to secure plantation sites on public land, collaborating with <strong>local communities</strong> to ensure maintenance is community-owned, and partnering with <strong>corporate CSR teams</strong> to close their annual Schedule VII filings with full documentation.</p>
-        <p>Bengal Tree Foundation knows lasting green cover only succeeds when <strong>the community has skin in the game</strong>. That's why every tree we plant is adopted, tagged, documented — and never forgotten.</p>
-        <div class="together-cta-row">
-          <a href="#contact" class="btn-solid">Start a CSR Partnership →</a>
-          <a href="#pillars" class="btn-ghost">Explore programmes ↗</a>
+        <div class="counter-strip reveal" id="heroCounters" aria-label="Impact counters">
+          <div class="counter-item"><span class="counter-value" data-target="500">0</span><div class="counter-label">Trees Planted This Month</div></div>
+          <div class="counter-item"><span class="counter-value" data-target="6000">0</span><div class="counter-label">Annual Target</div></div>
+          <div class="counter-item"><span class="counter-value" data-target="85" data-suffix="%+">0</span><div class="counter-label">Survival Rate</div></div>
+          <div class="counter-item"><span class="counter-value" data-target="8">0</span><div class="counter-label">Native Species</div></div>
         </div>
       </div>
-      <div class="reveal d2">
-        <div class="how-grid">
-          <div class="how-card">
-            <span class="how-card-icon">🗺️</span>
-            <div class="how-card-title">GPS-Verified Planting</div>
-            <div class="how-card-text">Every sapling gets a unique coordinate and tagged photo within 48 hours of planting. Location data delivered to your CSR team monthly.</div>
+    </section>
+
+    <section class="ticker" aria-label="Impact ticker">
+      <div class="ticker-track">
+        <span>🌳 500 trees planted in April · 🐦 Bird habitat corridors across North 24 Parganas · 🏫 4 government schools greened · 📋 Full Schedule VII documentation · 🌳 500 trees planted in April ·</span>
+        <span>🌳 500 trees planted in April · 🐦 Bird habitat corridors across North 24 Parganas · 🏫 4 government schools greened · 📋 Full Schedule VII documentation · 🌳 500 trees planted in April ·</span>
+      </div>
+    </section>
+
+    <section class="impact-snapshot" aria-label="Impact banner">
+      <div class="container">
+        <div class="impact-banner reveal">
+          <!-- PHOTO SLOT: impact-banner -->
+          <!-- Replace src below with your actual image path or URL -->
+          <img src="https://placehold.co/1400x500/132b15/5aaf5d?text=PHOTO%3A+Impact+Banner" alt="Wide banner showing a Bengal Tree Foundation plantation site and saplings" class="photo-slot" data-slot="impact-banner" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark-band" id="work">
+      <div class="container">
+        <div class="section-head center reveal">
+          <p class="eyebrow">How it works</p>
+          <h2>From your CSR budget to a living forest in 4 steps</h2>
+        </div>
+        <div class="steps-grid">
+          <article class="card step-card reveal">
+            <span class="step-number">01</span>
+            <div class="icon-wrap"><svg width="36" height="36" viewBox="0 0 48 48" aria-hidden="true"><path d="M13 36h22a7 7 0 0 0 7-7V17a7 7 0 0 0-7-7H13a7 7 0 0 0-7 7v12a7 7 0 0 0 7 7Z" fill="none" stroke="#d4a853" stroke-width="3"/><path d="M15 18h18M15 25h12M32 34l7 6" stroke="#8fd68f" stroke-width="3" stroke-linecap="round"/></svg></div>
+            <h3>Discovery Call</h3>
+            <p>We visit your site, assess soil, propose species mix.</p>
+          </article>
+          <article class="card step-card reveal">
+            <span class="step-number">02</span>
+            <div class="icon-wrap"><svg width="36" height="36" viewBox="0 0 48 48" aria-hidden="true"><path d="M14 6h16l8 8v28H14V6Z" fill="none" stroke="#d4a853" stroke-width="3"/><path d="M29 6v10h9M19 25h14M19 32h14" stroke="#8fd68f" stroke-width="3" stroke-linecap="round"/></svg></div>
+            <h3>Board Resolution</h3>
+            <p>We draft your CSR resolution and Form CSR-1 filing.</p>
+          </article>
+          <article class="card step-card reveal">
+            <span class="step-number">03</span>
+            <div class="icon-wrap"><svg width="36" height="36" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 41V23" stroke="#d4a853" stroke-width="3" stroke-linecap="round"/><path d="M24 24c-9-1-13-7-14-16 10 0 16 5 14 16ZM24 24c9-1 13-7 14-16-10 0-16 5-14 16Z" fill="none" stroke="#8fd68f" stroke-width="3"/><path d="M12 41h24" stroke="#d4a853" stroke-width="3" stroke-linecap="round"/></svg></div>
+            <h3>Plantation Drive</h3>
+            <p>GPS-tagged saplings planted. Photos within 48 hours.</p>
+          </article>
+          <article class="card step-card reveal">
+            <span class="step-number">04</span>
+            <div class="icon-wrap"><svg width="36" height="36" viewBox="0 0 48 48" aria-hidden="true"><path d="M10 38V12M20 38V22M30 38V17M40 38V8" stroke="#8fd68f" stroke-width="4" stroke-linecap="round"/><path d="M7 38h34" stroke="#d4a853" stroke-width="3" stroke-linecap="round"/></svg></div>
+            <h3>Quarterly Reports</h3>
+            <p>Survival counts, geo-tagged evidence, CA-certified utilisation certificate.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section leaf-band" id="programmes">
+      <div class="container">
+        <div class="section-head center reveal">
+          <p class="eyebrow">Programmes</p>
+          <h2>Choose your programme</h2>
+        </div>
+        <div class="programme-grid">
+          <article class="card programme-card featured reveal">
+            <span class="ribbon">Most Popular</span>
+            <h3>Programme A — Seedling</h3>
+            <div class="price">₹2.5 Lakh <small>/ engagement</small></div>
+            <ul class="check-list">
+              <li><svg width="18" height="18" viewBox="0 0 20 20"><path d="m4 10 4 4 8-9" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>500 certified fruit trees</li>
+              <li><svg width="18" height="18" viewBox="0 0 20 20"><path d="m4 10 4 4 8-9" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>GPS verification + photo documentation</li>
+              <li><svg width="18" height="18" viewBox="0 0 20 20"><path d="m4 10 4 4 8-9" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>Quarterly impact report</li>
+              <li><svg width="18" height="18" viewBox="0 0 20 20"><path d="m4 10 4 4 8-9" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>80G receipt + CA certificate</li>
+              <li><svg width="18" height="18" viewBox="0 0 20 20"><path d="m4 10 4 4 8-9" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>Schedule VII compliant</li>
+            </ul>
+            <a class="btn gold" href="#contact">Start Seedling Programme</a>
+          </article>
+          <article class="card programme-card reveal">
+            <h3>Programme B — Forest</h3>
+            <div class="price">₹5 Lakh <small>/ engagement</small></div>
+            <ul class="check-list">
+              <li><svg width="18" height="18" viewBox="0 0 20 20"><path d="m4 10 4 4 8-9" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>1,000 certified fruit trees</li>
+              <li><svg width="18" height="18" viewBox="0 0 20 20"><path d="m4 10 4 4 8-9" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>All of above +</li>
+              <li><svg width="18" height="18" viewBox="0 0 20 20"><path d="m4 10 4 4 8-9" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>QR + WhatsApp tree adoption</li>
+              <li><svg width="18" height="18" viewBox="0 0 20 20"><path d="m4 10 4 4 8-9" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>Custom branded certificates for employees</li>
+              <li><svg width="18" height="18" viewBox="0 0 20 20"><path d="m4 10 4 4 8-9" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>Dedicated project page on BTF website</li>
+            </ul>
+            <a class="btn gold" href="#contact">Start Forest Programme</a>
+          </article>
+          <article class="card programme-card reveal">
+            <h3>Programme C — Eco Legacy</h3>
+            <div class="price">₹10 Lakh <small>/ engagement</small></div>
+            <ul class="check-list">
+              <li><svg width="18" height="18" viewBox="0 0 20 20"><path d="m4 10 4 4 8-9" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>2,500+ certified fruit trees</li>
+              <li><svg width="18" height="18" viewBox="0 0 20 20"><path d="m4 10 4 4 8-9" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>All of above +</li>
+              <li><svg width="18" height="18" viewBox="0 0 20 20"><path d="m4 10 4 4 8-9" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>Named "Company Forest" with signage</li>
+              <li><svg width="18" height="18" viewBox="0 0 20 20"><path d="m4 10 4 4 8-9" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>Annual third-party survival audit</li>
+              <li><svg width="18" height="18" viewBox="0 0 20 20"><path d="m4 10 4 4 8-9" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>Featured in BTF Annual Impact Report</li>
+            </ul>
+            <a class="btn gold" href="#contact">Enquire for Custom Quote</a>
+          </article>
+        </div>
+        <p class="fine-print reveal">All programmes include 85% survival guarantee with replacement. All pricing indicative — final quote post site assessment.</p>
+      </div>
+    </section>
+
+    <section class="section dark-band">
+      <div class="container">
+        <div class="section-head center reveal">
+          <p class="eyebrow">Native fruit trees</p>
+          <h2>8 native species. All 7–8 ft nursery-raised.</h2>
+        </div>
+        <div class="species-grid">
+          <article class="card species-card reveal"><svg class="species-icon" viewBox="0 0 64 64"><circle cx="33" cy="35" r="17" fill="#d4a853"/><path d="M32 20c0-8 7-13 16-12-1 9-7 14-16 12Z" fill="#5aaf5d"/><path d="M30 20c-7-2-11-8-11-15 8 1 12 7 11 15Z" fill="#8fd68f"/></svg><h3>Mango <span>আম</span></h3><p>Long-lived shade, fruit, and community nutrition.</p></article>
+          <article class="card species-card reveal"><svg class="species-icon" viewBox="0 0 64 64"><circle cx="32" cy="36" r="15" fill="#8fd68f"/><circle cx="26" cy="32" r="2" fill="#132b15"/><circle cx="36" cy="39" r="2" fill="#132b15"/><path d="M32 20c5-8 12-10 20-7-4 8-10 11-20 7Z" fill="#5aaf5d"/></svg><h3>Guava <span>পেয়ারা</span></h3><p>Fast fruiting and suitable for school campuses.</p></article>
+          <article class="card species-card reveal"><svg class="species-icon" viewBox="0 0 64 64"><circle cx="29" cy="36" r="9" fill="#3a2348"/><circle cx="39" cy="34" r="8" fill="#4d2d62"/><circle cx="34" cy="45" r="8" fill="#2a1b36"/><path d="M33 20c7-7 15-8 22-3-5 7-12 9-22 3Z" fill="#5aaf5d"/></svg><h3>Jamun <span>জামুন</span></h3><p>Dense canopy and high value for birds.</p></article>
+          <article class="card species-card reveal"><svg class="species-icon" viewBox="0 0 64 64"><circle cx="32" cy="35" r="16" fill="#9fcf73"/><path d="M22 35h20M32 25v20" stroke="#132b15" stroke-width="3" stroke-linecap="round"/><path d="M32 19c7-8 15-9 22-4-5 7-12 9-22 4Z" fill="#5aaf5d"/></svg><h3>Amla <span>আমলকী</span></h3><p>Medicinal fruit and resilient urban planting.</p></article>
+          <article class="card species-card reveal"><svg class="species-icon" viewBox="0 0 64 64"><ellipse cx="33" cy="37" rx="17" ry="21" fill="#8fb94f"/><path d="M24 27c7 8 14 16 22 24M43 26 23 47" stroke="#132b15" stroke-width="2" opacity=".5"/><path d="M31 17c7-7 15-8 21-3-5 7-12 9-21 3Z" fill="#5aaf5d"/></svg><h3>Jackfruit <span>কাঁঠাল</span></h3><p>Large canopy and food security value.</p></article>
+          <article class="card species-card reveal"><svg class="species-icon" viewBox="0 0 64 64"><circle cx="32" cy="37" r="15" fill="#e8c57a"/><path d="M22 37h20" stroke="#132b15" stroke-width="3" stroke-linecap="round"/><path d="M32 20c8-6 15-6 21-1-6 6-12 7-21 1Z" fill="#5aaf5d"/></svg><h3>Lemon <span>লেবু</span></h3><p>Compact, productive, and household-friendly.</p></article>
+          <article class="card species-card reveal"><svg class="species-icon" viewBox="0 0 64 64"><circle cx="32" cy="36" r="17" fill="#c6a05a"/><path d="M24 24c5 10 11 18 20 27" stroke="#132b15" stroke-width="3" opacity=".55"/><path d="M31 19c8-7 16-7 22-2-6 6-13 8-22 2Z" fill="#5aaf5d"/></svg><h3>Bel <span>বেল</span></h3><p>Hardy species for dry and exposed sites.</p></article>
+          <article class="card species-card reveal"><svg class="species-icon" viewBox="0 0 64 64"><ellipse cx="32" cy="37" rx="15" ry="17" fill="#b88045"/><path d="M25 33c5 2 10 2 15 0M26 41c5 2 10 2 14 0" stroke="#5f3b20" stroke-width="2" stroke-linecap="round"/><path d="M32 20c7-7 14-8 20-3-5 7-12 8-20 3Z" fill="#5aaf5d"/></svg><h3>Chikoo <span>সবেদা</span></h3><p>Evergreen canopy and reliable fruiting.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section leaf-band">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Focus areas</p>
+          <h2>Community programmes beyond corporate CSR</h2>
+        </div>
+        <div class="focus-grid">
+          <article class="card focus-card reveal"><div class="icon-wrap"><svg width="28" height="28" viewBox="0 0 48 48"><path d="M24 42V25" stroke="#d4a853" stroke-width="4" stroke-linecap="round"/><path d="M24 25C13 23 8 16 8 6c11 1 18 7 16 19ZM24 25c11-2 16-9 16-19-11 1-18 7-16 19Z" fill="none" stroke="#8fd68f" stroke-width="3"/></svg></div><div><h3>Mission Green Bengal</h3><p>Fruit trees, verified survival, and local stewardship across North 24 Parganas.</p></div></article>
+          <article class="card focus-card reveal"><div class="icon-wrap"><svg width="28" height="28" viewBox="0 0 48 48"><path d="M9 39h30M14 39V18M24 39V10M34 39V21" stroke="#8fd68f" stroke-width="4" stroke-linecap="round"/><path d="M11 18h7l-3-7-4 7ZM21 10h7l-3-7-4 7ZM31 21h7l-3-7-4 7Z" fill="#d4a853"/></svg></div><div><h3>Miyawaki Pocket Forest</h3><p>Dense micro-forests for institutions, campuses, and urban edges.</p></div></article>
+          <article class="card focus-card reveal"><div class="icon-wrap"><svg width="28" height="28" viewBox="0 0 48 48"><path d="M12 31c9 2 14-3 15-11 8 3 11 9 8 18-9 2-17 0-23-7Z" fill="none" stroke="#8fd68f" stroke-width="3"/><path d="M14 31c7-3 13-6 18-12" stroke="#d4a853" stroke-width="3" stroke-linecap="round"/></svg></div><div><h3>Biodiversity &amp; Bird Conservation</h3><p>Habitat corridors using fruiting species and layered canopy planning.</p></div></article>
+          <article class="card focus-card reveal"><div class="icon-wrap"><svg width="28" height="28" viewBox="0 0 48 48"><path d="M9 13h30v25H9z" fill="none" stroke="#d4a853" stroke-width="3"/><path d="M15 20h18M15 27h12" stroke="#8fd68f" stroke-width="3" stroke-linecap="round"/></svg></div><div><h3>Project Prakritir Pathshala</h3><p>School plantation programmes with hands-on environmental workshops.</p></div></article>
+          <article class="card focus-card reveal"><div class="icon-wrap"><svg width="28" height="28" viewBox="0 0 48 48"><path d="M8 35c8-12 24-12 32 0M12 25c6-8 18-8 24 0" stroke="#8fd68f" stroke-width="3" stroke-linecap="round"/><path d="M24 39V18" stroke="#d4a853" stroke-width="4" stroke-linecap="round"/></svg></div><div><h3>Urban Green Corridors</h3><p>Neighbourhood shade, pollution buffers, and walking-route cooling.</p></div></article>
+          <article class="card focus-card reveal"><div class="icon-wrap"><svg width="28" height="28" viewBox="0 0 48 48"><path d="M10 38h28M15 38l18-28M24 38l9-14" stroke="#d4a853" stroke-width="3" stroke-linecap="round"/><path d="M12 25h24" stroke="#8fd68f" stroke-width="4" stroke-linecap="round"/></svg></div><div><h3>Road Divider Plantation</h3><p>Native roadside planting with municipal and panchayat approvals handled.</p></div></article>
+        </div>
+        <div class="project-sites">
+          <article class="project-card reveal">
+            <!-- PHOTO SLOT: project-barasat-hospital -->
+            <!-- Replace src below with your actual image path or URL -->
+            <img src="https://placehold.co/800x500/132b15/5aaf5d?text=PHOTO%3A+Barasat+Hospital" alt="Tree plantation at Barasat Hospital" class="photo-slot" data-slot="project-barasat-hospital" loading="lazy" />
+            <div><h3>Barasat Hospital</h3><p>Healthcare campus shade and fruit trees.</p></div>
+          </article>
+          <article class="project-card reveal">
+            <!-- PHOTO SLOT: project-vip-road -->
+            <!-- Replace src below with your actual image path or URL -->
+            <img src="https://placehold.co/800x500/132b15/5aaf5d?text=PHOTO%3A+VIP+Road+Kolkata" alt="VIP Road Kolkata plantation with roadside saplings" class="photo-slot" data-slot="project-vip-road" loading="lazy" />
+            <div><h3>VIP Road Kolkata</h3><p>Urban corridor plantation and maintenance.</p></div>
+          </article>
+          <article class="project-card reveal">
+            <!-- PHOTO SLOT: project-school -->
+            <!-- Replace src below with your actual image path or URL -->
+            <img src="https://placehold.co/800x500/132b15/5aaf5d?text=PHOTO%3A+School+Programme" alt="School plantation programme with students and saplings" class="photo-slot" data-slot="project-school" loading="lazy" />
+            <div><h3>School Programme</h3><p>Students planting and tracking native trees.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark-band" id="gallery">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Gallery</p>
+          <h2>From the field</h2>
+        </div>
+        <div class="gallery-grid">
+          <div class="gallery-item reveal" data-location="Barasat Hospital"><img src="https://placehold.co/600x400/132b15/5aaf5d?text=PHOTO%3A+Gallery+1" alt="Plantation drive at Barasat Hospital" class="photo-slot" data-slot="gallery-1" loading="lazy" /></div>
+          <div class="gallery-item reveal" data-location="VIP Road Kolkata"><img src="https://placehold.co/600x400/132b15/5aaf5d?text=PHOTO%3A+Gallery+2" alt="Saplings planted along VIP Road Kolkata" class="photo-slot" data-slot="gallery-2" loading="lazy" /></div>
+          <div class="gallery-item reveal" data-location="Sukanta Sishu Udyan"><img src="https://placehold.co/600x400/132b15/5aaf5d?text=PHOTO%3A+Gallery+3" alt="Community plantation at Sukanta Sishu Udyan" class="photo-slot" data-slot="gallery-3" loading="lazy" /></div>
+          <div class="gallery-item reveal" data-location="New Barrackpur"><img src="https://placehold.co/600x400/132b15/5aaf5d?text=PHOTO%3A+Gallery+4" alt="Tree plantation work in New Barrackpur" class="photo-slot" data-slot="gallery-4" loading="lazy" /></div>
+          <div class="gallery-item reveal" data-location="Habra"><img src="https://placehold.co/600x400/132b15/5aaf5d?text=PHOTO%3A+Gallery+5" alt="Habra plantation drive with native fruit trees" class="photo-slot" data-slot="gallery-5" loading="lazy" /></div>
+          <div class="gallery-item reveal" data-location="Deganga"><img src="https://placehold.co/600x400/132b15/5aaf5d?text=PHOTO%3A+Gallery+6" alt="Deganga plantation site with community volunteers" class="photo-slot" data-slot="gallery-6" loading="lazy" /></div>
+        </div>
+        <a class="text-link reveal" href="#">View Full Gallery →</a>
+      </div>
+    </section>
+
+    <section class="section leaf-band" id="csr">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">CSR partners</p>
+          <h2>Why Bengal Tree Foundation</h2>
+        </div>
+        <div class="why-grid">
+          <div class="why-photo reveal">
+            <!-- PHOTO SLOT: csr-partnership -->
+            <!-- Replace src below with your actual image path or URL -->
+            <img src="https://placehold.co/600x400/132b15/5aaf5d?text=PHOTO%3A+CSR+Partner+Event" alt="Corporate partner plantation event with Bengal Tree Foundation" class="photo-slot" data-slot="csr-partnership" loading="lazy" />
           </div>
-          <div class="how-card">
-            <span class="how-card-icon">🔬</span>
-            <div class="how-card-title">Soil Science &amp; Species Selection</div>
-            <div class="how-card-text">Site soil tests determine species mix. 8 certified native fruit trees chosen for West Bengal's climate, growth rate, and community benefit.</div>
+          <div class="why-list reveal">
+            <ul class="check-list">
+              <li><svg width="18" height="18" viewBox="0 0 20 20"><path d="m4 10 4 4 8-9" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>GPS-verified planting with 48-hour photo delivery</li>
+              <li><svg width="18" height="18" viewBox="0 0 20 20"><path d="m4 10 4 4 8-9" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>8 certified native fruit species — 7–8 ft nursery-raised</li>
+              <li><svg width="18" height="18" viewBox="0 0 20 20"><path d="m4 10 4 4 8-9" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>85%+ survival guarantee, contractual, with third-party audit</li>
+              <li><svg width="18" height="18" viewBox="0 0 20 20"><path d="m4 10 4 4 8-9" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>Full Schedule VII CSR documentation pack</li>
+            </ul>
           </div>
-          <div class="how-card">
-            <span class="how-card-icon">🤝</span>
-            <div class="how-card-title">Corporate Partnerships</div>
-            <div class="how-card-text">We handle every step from Board Resolution to CA-certified utilisation certificate — your CSR head has zero administrative burden.</div>
-          </div>
-          <div class="how-card">
-            <span class="how-card-icon">📊</span>
-            <div class="how-card-title">Quarterly Impact Reports</div>
-            <div class="how-card-text">Survival counts, species data, geo-tagged evidence, and community narrative — delivered every quarter to your board.</div>
-          </div>
-          <div class="how-card">
-            <span class="how-card-icon">📱</span>
-            <div class="how-card-title">QR + WhatsApp Engagement</div>
-            <div class="how-card-text">Optional add-on: every customer purchase triggers a live tree profile, digital certificate, and WhatsApp updates — measurable brand loyalty.</div>
-          </div>
-          <div class="how-card">
-            <span class="how-card-icon">🛡️</span>
-            <div class="how-card-title">85% Survival Guarantee</div>
-            <div class="how-card-text">Contractual commitment. Third-party field audit at year-end. All mortalities replaced at no additional cost until threshold is met.</div>
+          <div class="why-list reveal">
+            <ul class="check-list">
+              <li><svg width="18" height="18" viewBox="0 0 20 20"><path d="m4 10 4 4 8-9" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>80G, 12A, Form CSR-1, CA utilisation certificate</li>
+              <li><svg width="18" height="18" viewBox="0 0 20 20"><path d="m4 10 4 4 8-9" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>QR + WhatsApp tree adoption add-on available</li>
+              <li><svg width="18" height="18" viewBox="0 0 20 20"><path d="m4 10 4 4 8-9" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>KMC &amp; gram panchayat site approvals handled</li>
+              <li><svg width="18" height="18" viewBox="0 0 20 20"><path d="m4 10 4 4 8-9" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>Community maintenance partnerships built in</li>
+            </ul>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- NUMBERS -->
-<section id="numbers">
-  <div class="container">
-    <div class="numbers-grid">
-      <div class="number-item reveal">
-        <span class="number-val">500</span>
-        <span class="number-label">Trees planted per month across Kolkata &amp; North 24 Parganas</span>
+    <section class="section dark-band" id="stories">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Stories</p>
+          <h2>Field notes and compliance guides</h2>
+        </div>
+        <div class="story-grid">
+          <article class="card story-card reveal">
+            <div class="story-image"><img src="https://placehold.co/420x200/132b15/5aaf5d?text=PHOTO%3A+Story+1" alt="Students beside newly planted mango and guava trees in Barasat" class="photo-slot" data-slot="story-1" loading="lazy" /></div>
+            <div class="story-body"><span class="tag">Schools</span><h3>500 Mango and Guava Trees Planted Across 4 Government Schools in Barasat</h3><p>500 trees. 4 campuses. Students tracking survival through the year.</p><a class="text-link" href="#">Read more →</a></div>
+          </article>
+          <article class="card story-card reveal">
+            <div class="story-image"><img src="https://placehold.co/420x200/132b15/5aaf5d?text=PHOTO%3A+Story+2" alt="CSR documentation pack and plantation records on a desk" class="photo-slot" data-slot="story-2" loading="lazy" /></div>
+            <div class="story-body"><span class="tag">Compliance</span><h3>How Our Documentation Pack Closes Your FY Schedule VII Filing</h3><p>Board resolution, GPS proof, utilisation certificate, and reporting in one clean pack.</p><a class="text-link" href="#">Read more →</a></div>
+          </article>
+          <article class="card story-card reveal">
+            <div class="story-image"><img src="https://placehold.co/420x200/132b15/5aaf5d?text=PHOTO%3A+Story+3" alt="QR code tree adoption certificate beside a young fruit tree" class="photo-slot" data-slot="story-3" loading="lazy" /></div>
+            <div class="story-body"><span class="tag">Adoption</span><h3>The QR + WhatsApp Module: Turning Every Purchase Into a Living Tree Certificate</h3><p>Each adopted tree can carry a digital certificate, photo trail, and follow-up updates.</p><a class="text-link" href="#">Read more →</a></div>
+          </article>
+        </div>
       </div>
-      <div class="number-item reveal d1">
-        <span class="number-val">6,000</span>
-        <span class="number-label">Annual plantation target — cumulative, documented, and guaranteed</span>
-      </div>
-      <div class="number-item reveal d2">
-        <span class="number-val">85%+</span>
-        <span class="number-label">Guaranteed survival rate, third-party verified at year-end with replacement guarantee</span>
-      </div>
-      <div class="number-item reveal d3">
-        <span class="number-val">8</span>
-        <span class="number-label">Certified native fruit species — all minimum 7–8 ft nursery-raised</span>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- CTA STRIP -->
-<section id="cta-strip">
-  <div class="container">
-    <div class="cta-strip-inner">
-      <div class="cta-strip-text">
-        <h2>Nature needs us now. So does your CSR compliance.</h2>
-        <p>FY 2026–27 discovery calls open now. Board-ready proposal delivered within 48 hours.</p>
+    <section class="section leaf-band">
+      <div class="container">
+        <div class="section-head center reveal">
+          <p class="eyebrow">Team</p>
+          <h2>The people behind every tree</h2>
+        </div>
+        <div class="team-grid">
+          <article class="card team-card reveal">
+            <div class="team-photo">
+              <img src="https://placehold.co/300x300/132b15/5aaf5d?text=PHOTO%3A+Partha+Mitra" alt="Partha Mitra, President of Bengal Tree Foundation" class="photo-slot" data-slot="team-partha" loading="lazy" />
+            </div>
+            <h3>Partha Mitra</h3>
+            <div class="team-role">President</div>
+            <p>Leads field partnerships, public institution coordination, and long-term stewardship for plantation sites.</p>
+          </article>
+          <article class="card team-card reveal">
+            <div class="team-photo">
+              <img src="https://placehold.co/300x300/132b15/5aaf5d?text=PHOTO%3A+Ayan+Sen" alt="Ayan Sen, Secretary of Bengal Tree Foundation" class="photo-slot" data-slot="team-ayan" loading="lazy" />
+            </div>
+            <h3>Ayan Sen</h3>
+            <div class="team-role">Secretary</div>
+            <p>Coordinates CSR documentation, reporting workflows, and communication between partners and field teams.</p>
+          </article>
+        </div>
       </div>
-      <div style="display:flex;gap:1rem;flex-wrap:wrap;">
-        <a href="#contact" class="btn-cta">
-          Schedule a Discovery Call
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 5l3 3-3 3" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
-        <a href="tel:+919831135110" class="btn-ghost" style="background:rgba(0,0,0,.2);border-color:rgba(255,255,255,.3);color:#fff;">
-          +91-98311 35110
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- STORIES -->
-<section id="stories">
-  <div class="container">
-    <div class="stories-header reveal">
-      <h2>Stories &amp; Updates</h2>
-      <a href="#" class="see-all">See all stories →</a>
-    </div>
-    <div class="stories-grid">
-      <!-- Story 1 -->
-      <div class="story-card reveal reveal-d1">
-        <div class="story-visual">
-          <svg viewBox="0 0 420 200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" width="100%" height="100%">
-            <defs><radialGradient id="sg1" cx="50%" cy="30%" r="80%"><stop offset="0%" stop-color="#1e5922"/><stop offset="100%" stop-color="#0d1f0f"/></radialGradient></defs>
-            <rect width="420" height="200" fill="url(#sg1)"/>
-            <rect x="185" y="95" width="10" height="90" rx="3" fill="#2a4a18"/>
-            <ellipse cx="190" cy="82" rx="52" ry="58" fill="#2d6a30"/>
-            <ellipse cx="170" cy="95" rx="36" ry="40" fill="#3d8c40"/>
-            <ellipse cx="210" cy="88" rx="34" ry="38" fill="#3d8c40"/>
-            <circle cx="175" cy="100" r="4" fill="#d4a853" opacity=".8"/>
-            <circle cx="203" cy="75" r="3.5" fill="#d4a853" opacity=".7"/>
-            <circle cx="190" cy="90" r="3" fill="#e8785a" opacity=".75"/>
-            <rect x="0" y="180" width="420" height="20" fill="#0d1f0f"/>
-          </svg>
-          <span class="story-tag">Plantation Drive</span>
+    <section class="section dark-band">
+      <div class="container">
+        <div class="section-head center reveal">
+          <p class="eyebrow">Membership</p>
+          <h2>Join the local work, month by month</h2>
         </div>
-        <div class="story-body">
-          <h3>500 Mango and Guava Trees Planted Across 4 Government Schools in Barasat</h3>
-          <p>The April drive covered Barasat, Deganga, and Habra — 500 certified 7–8 ft saplings, all GPS-tagged and photographed within 48 hours of planting.</p>
-          <span class="story-read">
-            Read more →
-          </span>
+        <div class="membership-grid">
+          <article class="card membership-card reveal"><h3>Student</h3><div class="price">₹50<small>/month</small></div><p>BTF T-shirt, ID Card, Workshop access, Plantation Drive invites.</p><a class="btn gold" href="#contact">Join as a Member</a></article>
+          <article class="card membership-card reveal"><h3>General</h3><div class="price">₹100<small>/month</small></div><p>BTF T-shirt, ID Card, Workshop access, Plantation Drive invites.</p><a class="btn gold" href="#contact">Join as a Member</a></article>
+          <article class="card membership-card reveal"><h3>Premium</h3><div class="price">₹250<small>/month</small></div><p>BTF T-shirt, ID Card, Workshop access, Plantation Drive invites.</p><a class="btn gold" href="#contact">Join as a Member</a></article>
         </div>
       </div>
-      <!-- Story 2 -->
-      <div class="story-card reveal d2">
-        <div class="story-visual">
-          <svg viewBox="0 0 420 200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" width="100%" height="100%">
-            <defs><radialGradient id="sg2" cx="40%" cy="20%" r="85%"><stop offset="0%" stop-color="#1a4d1c"/><stop offset="100%" stop-color="#0d1f0f"/></radialGradient></defs>
-            <rect width="420" height="200" fill="url(#sg2)"/>
-            <!-- Document glyph -->
-            <rect x="155" y="35" width="110" height="140" rx="6" fill="rgba(45,106,48,.2)" stroke="rgba(93,175,93,.2)" stroke-width="1"/>
-            <rect x="172" y="55" width="50" height="5" rx="2" fill="rgba(143,214,143,.25)"/>
-            <rect x="172" y="70" width="76" height="3" rx="1" fill="rgba(143,214,143,.15)"/>
-            <rect x="172" y="82" width="60" height="3" rx="1" fill="rgba(143,214,143,.15)"/>
-            <circle cx="210" cy="130" r="22" fill="rgba(61,140,64,.2)" stroke="rgba(93,175,93,.3)" stroke-width="1.5"/>
-            <path d="M200 130 l7 7 l13-14" stroke="#8fd68f" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-            <rect x="0" y="180" width="420" height="20" fill="#0d1f0f"/>
-          </svg>
-          <span class="story-tag">ESG Compliance</span>
-        </div>
-        <div class="story-body">
-          <h3>How Bengal Tree Foundation's Documentation Pack Closes Your FY Schedule VII Filing</h3>
-          <p>From Form CSR-1 to the CA-certified utilisation certificate — a step-by-step guide to what every CSR officer receives at year-end.</p>
-          <span class="story-read">Read more →</span>
-        </div>
-      </div>
-      <!-- Story 3 -->
-      <div class="story-card reveal d3">
-        <div class="story-visual">
-          <svg viewBox="0 0 420 200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" width="100%" height="100%">
-            <defs><radialGradient id="sg3" cx="60%" cy="25%" r="80%"><stop offset="0%" stop-color="#1a4d1c"/><stop offset="100%" stop-color="#0b1a0d"/></radialGradient></defs>
-            <rect width="420" height="200" fill="url(#sg3)"/>
-            <!-- QR code glyph -->
-            <rect x="155" y="40" width="50" height="50" rx="4" fill="none" stroke="rgba(143,214,143,.3)" stroke-width="1.5"/>
-            <rect x="165" y="50" width="10" height="10" rx="1" fill="rgba(143,214,143,.3)"/>
-            <rect x="182" y="50" width="10" height="10" rx="1" fill="rgba(143,214,143,.3)"/>
-            <rect x="165" y="67" width="10" height="10" rx="1" fill="rgba(143,214,143,.3)"/>
-            <rect x="182" y="67" width="10" height="10" rx="1" fill="rgba(143,214,143,.3)"/>
-            <!-- Phone -->
-            <rect x="230" y="30" width="70" height="130" rx="10" fill="rgba(45,106,48,.25)" stroke="rgba(93,175,93,.25)" stroke-width="1"/>
-            <rect x="240" y="50" width="50" height="70" rx="4" fill="rgba(93,175,93,.08)"/>
-            <circle cx="265" cy="145" r="6" fill="rgba(93,175,93,.2)" stroke="rgba(93,175,93,.3)" stroke-width="1"/>
-            <!-- Tree icon in phone -->
-            <rect x="261" y="80" width="8" height="30" rx="2" fill="#2d6a30"/>
-            <ellipse cx="265" cy="73" rx="18" ry="20" fill="#2d8c30"/>
-            <rect x="0" y="180" width="420" height="20" fill="#0d1f0f"/>
-          </svg>
-          <span class="story-tag">Innovation</span>
-        </div>
-        <div class="story-body">
-          <h3>The QR + WhatsApp Module: Turning Every Purchase Into a Living Tree Certificate</h3>
-          <p>For jewellery brands and consumer companies — how a ₹25/tree add-on creates measurable customer loyalty and social sharing at scale.</p>
-          <span class="story-read">Read more →</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- FOOTER -->
-<footer id="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <h3>
-          <div class="nav-leaf" style="width:28px;height:28px;" aria-hidden="true">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 22V11M12 11C12 11 7.5 8 7.5 4.5C7.5 2.57 9.51 1 12 1s4.5 1.57 4.5 3.5C16.5 8 12 11 12 11Z" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/><path d="M12 11C12 11 8.5 13 7 17M12 11c0 0 3.5 2 5 6" stroke="rgba(255,255,255,.7)" stroke-width="1.6" stroke-linecap="round"/></svg>
-          </div>
-          Bengal Tree Foundation
-        </h3>
-        <p>Where Corporate Purpose Meets Planetary Impact</p>
-        <p>Reg. IV-190100727/2024 · West Bengal Societies Act<br>
-        Barasat, North 24 Parganas, Kolkata – 700124</p>
-        <p><a href="https://bengaltreefoundation.online" target="_blank" rel="noopener">bengaltreefoundation.online</a> ·
-        <a href="https://facebook.com/bengaltreefoundation" target="_blank" rel="noopener">Facebook</a></p>
+    <section class="section leaf-band" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-panel reveal">
+          <p class="eyebrow">Contact</p>
+          <h2>Start with a discovery call</h2>
+          <dl>
+            <div><dt>Address</dt><dd>Barasat, North 24 Parganas, Kolkata – 700124</dd></div>
+            <div><dt>Email</dt><dd><a href="mailto:info@bengaltreefoundation.online">info@bengaltreefoundation.online</a></dd></div>
+            <div><dt>Phone 1</dt><dd><a href="tel:+918420770834">+91 84207 70834</a></dd></div>
+            <div><dt>Phone 2</dt><dd><a href="tel:+919831135110">+91 98311 35110</a></dd></div>
+            <div><dt>Facebook</dt><dd><a href="https://facebook.com/bengaltreefoundation" target="_blank" rel="noopener">facebook.com/bengaltreefoundation</a></dd></div>
+          </dl>
+          <a class="btn green" href="https://wa.me/918420770834" target="_blank" rel="noopener">Chat on WhatsApp</a>
+        </div>
+        <form class="contact-form reveal" action="#">
+          <div class="field"><label for="name">Name</label><input id="name" name="name" autocomplete="name" required></div>
+          <div class="field"><label for="company">Company Name</label><input id="company" name="company" autocomplete="organization"></div>
+          <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+          <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel"></div>
+          <div class="field"><label for="interest">Programme Interest</label><select id="interest" name="interest"><option>Seedling</option><option>Forest</option><option>Eco Legacy</option><option>Membership</option><option>General</option></select></div>
+          <div class="field"><label for="message">Message</label><textarea id="message" name="message"></textarea></div>
+          <button class="btn gold" type="submit">Send Message</button>
+          <p>Or call us directly — we respond within 2 hours on business days.</p>
+        </form>
       </div>
+    </section>
+
+    <section class="cta-strip">
+      <div class="container cta-inner">
+        <h2>FY 2026–27 discovery calls open. Board-ready proposal in 48 hours.</h2>
+        <div class="cta-actions">
+          <a class="btn gold" href="https://wa.me/918420770834" target="_blank" rel="noopener">Schedule a Call</a>
+          <a class="btn ghost" href="tel:+918420770834">+91 84207 70834</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <svg class="footer-leaf" viewBox="0 0 200 220" aria-hidden="true"><path d="M96 214V94" stroke="currentColor" stroke-width="16" stroke-linecap="round"/><path d="M96 96C33 91 9 48 8 4c61 1 96 36 88 92ZM96 96c63-5 87-48 88-92-61 1-96 36-88 92Z" fill="currentColor"/></svg>
+    <div class="container footer-grid">
       <div class="footer-col">
-        <h4>Discover</h4>
-        <ul>
-          <li><a href="#intro">Who we are</a></li>
-          <li><a href="#numbers">Our impact</a></li>
-          <li><a href="#stories">Latest stories</a></li>
-          <li><a href="#pillars">Our programmes</a></li>
-          <li><a href="https://facebook.com/bengaltreefoundation" target="_blank" rel="noopener">Facebook</a></li>
-        </ul>
+        <a class="brand" href="#home"><svg width="34" height="34" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22" fill="#132b15" stroke="#d4a853" stroke-width="2"/><path d="M24 36V22" stroke="#d4a853" stroke-width="3" stroke-linecap="round"/><path d="M24 22c-8-1-11-6-12-13 8 0 13 4 12 13Z" fill="#5aaf5d"/><path d="M24 22c8-1 11-6 12-13-8 0-13 4-12 13Z" fill="#8fd68f"/></svg><span>Bengal Tree Foundation</span></a>
+        <p style="margin-top:14px;">Where Corporate Purpose Meets Planetary Impact</p>
+        <p style="margin-top:10px;">Reg. No: IV-190100727/2024</p>
+        <p style="margin-top:10px;"><a href="tel:+918420770834">+91 84207 70834</a> · <a href="tel:+919831135110">+91 98311 35110</a></p>
+        <p style="margin-top:10px;"><a href="https://wa.me/918420770834" target="_blank" rel="noopener">WhatsApp</a> · <a href="https://facebook.com/bengaltreefoundation" target="_blank" rel="noopener">Facebook</a></p>
       </div>
-      <div class="footer-col">
-        <h4>Partnerships</h4>
-        <ul>
-          <li><a href="#programmes">Programme A — Seedling</a></li>
-          <li><a href="#programmes">Programme B — Forest</a></li>
-          <li><a href="#programmes">Programme C — Eco</a></li>
-          <li><a href="#qr-module">QR + WhatsApp Add-On</a></li>
-          <li><a href="#contact">Partner with us</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Compliance</h4>
-        <ul>
-          <li><a href="#compliance">Section 80G</a></li>
-          <li><a href="#compliance">Schedule VII CSR</a></li>
-          <li><a href="#compliance">Form CSR-1 (MCA)</a></li>
-          <li><a href="#compliance">Section 12A &amp; 35AC</a></li>
-          <li><a href="#contact">Request documentation</a></li>
-        </ul>
-      </div>
+      <div class="footer-col"><h3>Discover</h3><ul><li><a href="#work">Our Work</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#stories">Stories</a></li><li><a href="#contact">Contact</a></li></ul></div>
+      <div class="footer-col"><h3>Partnerships</h3><ul><li><a href="#programmes">Seedling Programme</a></li><li><a href="#programmes">Forest Programme</a></li><li><a href="#programmes">Eco Legacy</a></li><li><a href="#contact">Membership</a></li></ul></div>
+      <div class="footer-col"><h3>Compliance</h3><ul><li>Schedule VII CSR</li><li>80G &amp; 12A Certified</li><li>Form CSR-1 support</li><li>CA utilisation certificate</li></ul></div>
     </div>
-    <div class="footer-bottom">
-      <div>© 2026 Bengal Tree Foundation · Reg. IV-190100727/2024 · West Bengal Societies Registration Act · Enterprise CSR &amp; ESG Fruit Tree Plantation Partner, Kolkata</div>
-      <div class="footer-legal">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Site Terms</a>
-        <a href="#">Accessibility</a>
-      </div>
-    </div>
-  </div>
-</footer>
+    <div class="container copyright">© 2026 Bengal Tree Foundation · Reg. IV-190100727/2024 · West Bengal Societies Registration Act</div>
+  </footer>
 
-<script>
-/* ---- NAV scroll ---- */
-const nav = document.getElementById('navbar');
-window.addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 60));
+  <script>
+    const nav = document.getElementById("siteNav");
+    const menuButton = document.getElementById("menuButton");
+    const mobileMenu = document.getElementById("mobileMenu");
 
-/* ---- Hamburger ---- */
-const ham = document.getElementById('hamburger');
-const mob = document.getElementById('mobMenu');
-ham.addEventListener('click', () => {
-  const open = mob.classList.toggle('open');
-  ham.classList.toggle('open');
-  ham.setAttribute('aria-expanded', open);
-  document.body.style.overflow = open ? 'hidden' : '';
-});
-mob.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-  mob.classList.remove('open');
-  ham.classList.remove('open');
-  ham.setAttribute('aria-expanded', false);
-  document.body.style.overflow = '';
-}));
+    function updateNav() {
+      nav.classList.toggle("scrolled", window.scrollY > 60);
+    }
 
-/* ---- Scroll reveal ---- */
-const ro = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); ro.unobserve(e.target); } });
-}, { threshold: 0.12 });
-document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
+    window.addEventListener("scroll", updateNav, { passive: true });
+    updateNav();
 
-/* ---- Bokeh particles in hero ---- */
-(function() {
-  const container = document.getElementById('heroParticles');
-  const count = 18;
-  for (let i = 0; i < count; i++) {
-    const el = document.createElement('div');
-    el.className = 'bokeh';
-    const size = 60 + Math.random() * 140;
-    el.style.cssText = `
-      width:${size}px; height:${size}px;
-      left:${Math.random()*100}%; top:${Math.random()*100}%;
-      animation-duration:${8 + Math.random()*12}s;
-      animation-delay:${-Math.random()*12}s;
-      opacity:${0.2 + Math.random()*0.3};
-    `;
-    container.appendChild(el);
-  }
-})();
+    function closeMenu() {
+      mobileMenu.classList.remove("open");
+      menuButton.classList.remove("active");
+      menuButton.setAttribute("aria-expanded", "false");
+      menuButton.setAttribute("aria-label", "Open mobile menu");
+      document.body.classList.remove("menu-open");
+    }
 
-/* ---- Smooth scroll ---- */
-document.querySelectorAll('a[href^="#"]').forEach(a => {
-  a.addEventListener('click', e => {
-    const t = document.querySelector(a.getAttribute('href'));
-    if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
-  });
-});
-</script>
+    menuButton.addEventListener("click", () => {
+      const isOpen = mobileMenu.classList.toggle("open");
+      menuButton.classList.toggle("active", isOpen);
+      menuButton.setAttribute("aria-expanded", String(isOpen));
+      menuButton.setAttribute("aria-label", isOpen ? "Close mobile menu" : "Open mobile menu");
+      document.body.classList.toggle("menu-open", isOpen);
+    });
+
+    mobileMenu.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeMenu));
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") closeMenu();
+    });
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.16 });
+
+    document.querySelectorAll(".reveal").forEach((element) => revealObserver.observe(element));
+
+    function easeOutCubic(t) {
+      return 1 - Math.pow(1 - t, 3);
+    }
+
+    function animateCounter(element) {
+      const target = Number(element.dataset.target);
+      const suffix = element.dataset.suffix || "";
+      const duration = 2000;
+      const start = performance.now();
+
+      function tick(now) {
+        const progress = Math.min((now - start) / duration, 1);
+        const value = Math.round(target * easeOutCubic(progress));
+        element.textContent = value.toLocaleString("en-IN") + suffix;
+        if (progress < 1) requestAnimationFrame(tick);
+      }
+
+      requestAnimationFrame(tick);
+    }
+
+    const heroCounters = document.getElementById("heroCounters");
+
+    function startCounters() {
+      if (heroCounters.dataset.counted === "true") return;
+      heroCounters.dataset.counted = "true";
+      heroCounters.querySelectorAll(".counter-value").forEach(animateCounter);
+    }
+
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          startCounters();
+          counterObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.35 });
+
+    counterObserver.observe(heroCounters);
+
+    requestAnimationFrame(() => {
+      const rect = heroCounters.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom > 0) startCounters();
+    });
+  </script>
 </body>
 </html>
